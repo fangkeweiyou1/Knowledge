@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MMTheme.DataSheet" parent="MMTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/transparency</item>
+        <item name="android:windowBackground">@color/transparency</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/DataSheetAnimation</item>
+    </style>
+
+    <style name="MMTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/transparency</item>
+        <item name="android:windowBackground">@color/transparency</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="DataSheetAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/anim_popup_up</item>
+        <item name="android:windowExitAnimation">@anim/anim_popup_down</item>
+    </style>
+
+    <style name="popup_animation_updown">
+        <item name="android:windowEnterAnimation">@anim/anim_popup_up</item>
+        <item name="android:windowExitAnimation">@anim/anim_popup_down</item>
+    </style>
+</resources>

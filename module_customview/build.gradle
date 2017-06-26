@@ -1,21 +1,47 @@
-apply plugin: 'com.android.application'
+if (CustomviewIsApplication.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
+
     defaultConfig {
-        applicationId "com.knowledge"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+
+    sourceSets {
+        main {
+            if (CustomviewIsApplication.toBoolean()) {
+                manifest.srcFile 'src/main/appli/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/libr/AndroidManifest.xml'
+            }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
         }
     }
 }
@@ -27,10 +53,5 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
-    if (!CustomviewIsApplication.toBoolean()) {
-        compile project(':module_customview')
-    }
     compile 'com.android.support:recyclerview-v7:24.2.0'
-    compile 'com.jakewharton:butterknife:8.6.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 }

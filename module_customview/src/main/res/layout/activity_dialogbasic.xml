@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".activity.DialogBasicActvitity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#eee">
+
+        <TextView
+
+            android:id="@+id/tv_titlename"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/dialog_basic"
+            android:textColor="#222"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_showdialog"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="弹出dialog"/>
+
+</LinearLayout>
