@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/Knowledge.iml" filepath="$PROJECT_DIR$/Knowledge.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_customview/module_customview.iml" filepath="$PROJECT_DIR$/module_customview/module_customview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/module_utils/module_utils.iml" filepath="$PROJECT_DIR$/module_utils/module_utils.iml" />
     </modules>
   </component>
 </project>

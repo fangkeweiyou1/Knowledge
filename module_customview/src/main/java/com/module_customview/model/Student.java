@@ -1,4 +1,4 @@
-package com.module_utils.model;
+package com.module_customview.model;
 
 import android.text.TextUtils;
 

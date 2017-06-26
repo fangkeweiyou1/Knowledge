@@ -1,4 +1,4 @@
-package com.module_utils.activity;
+package com.module_customview.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,18 +11,22 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.module_utils.R;
-import com.module_utils.model.Student;
+import com.module_customview.R;
+import com.module_customview.model.Student;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import cn.campusapp.router.annotation.RouterMap;
+
 /**
  * Created by zhangyuncai on 2017/6/26.
+ * Comparator比较器的使用
  */
 
+@RouterMap({"activity://comparator"})
 public class ComparatorActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;

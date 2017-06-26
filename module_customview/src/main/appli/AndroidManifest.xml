@@ -2,14 +2,16 @@
           package="com.module_customview">
 
     <application
-        android:icon="@mipmap/ic_launcher"
+        android:name=".CustomViewApplication"
         android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         >
 
-        <activity android:name=".activity.CustomViewActivity">
+        <activity
+            android:name=".activity.CustomViewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -17,11 +19,32 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.RecyclerHomeActivity"/>
-        <activity android:name=".activity.UDLRRecyclerActivity"/>
-        <activity android:name=".activity.PartRecyclerActivity"/>
-        <activity android:name=".activity.DialogBasicActvitity"/>
-        <activity android:name=".activity.TextBasicActivity"/>
+        <activity
+            android:name=".activity.RecyclerHomeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".activity.UDLRRecyclerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".activity.PartRecyclerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".activity.DialogBasicActvitity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".activity.TextBasicActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".activity.ComparatorActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".activity.MathActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".activity.DrawerLayoutActivity"
+            android:theme="@style/AppTheme">
+
+        </activity>
 
     </application>
 

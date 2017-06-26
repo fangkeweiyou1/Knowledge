@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">module_customview</string>
 
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+
     <string name="recyclerview_udrl">可以上下左右滑动的RecyclerView</string>
     <string name="recyclerview_part">部分上下左右滑动的RecyclerView</string>
     <string name="dialog_basic">讲解dialog的一些基本配置</string>
@@ -12,4 +15,10 @@
     <string name="progressbar_basic">讲解progressbar的一些基本配置</string>
     <string name="viewpager_basic">讲解viewpager的一些基本配置</string>
     <string name="webview_basic">讲解webview的一些基本配置</string>
+
+
+    <string name="utils_math">math的基本知识</string>
+    <string name="utils_Comparator">Comparator的基本知识</string>
+
+
 </resources>

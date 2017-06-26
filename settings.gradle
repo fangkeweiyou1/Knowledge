@@ -1,1 +1,1 @@
-include ':app', ':module_customview', ':module_utils'
+include ':app', ':module_customview'
