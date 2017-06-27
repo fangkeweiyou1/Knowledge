@@ -11,12 +11,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.module_customview.R;
+import com.module_customview.utils.LogUtils;
 import com.module_customview.widget.flowlayout.FlowLayout;
 import com.module_customview.widget.flowlayout.TagAdapter;
 import com.module_customview.widget.flowlayout.TagFlowLayout;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import cn.campusapp.router.Router;
 
@@ -25,10 +28,12 @@ import cn.campusapp.router.Router;
  */
 
 public class CustomViewActivity extends AppCompatActivity {
+    private static final String TAG = "CustomViewActivity";
 
     private TextView skip;
 
-    private List<String> activityNames = new ArrayList<>();
+    private Map<String, String> activityNames = new LinkedHashMap<>();//LinkedHashMap可以对KEY值顺序取出
+    private List<String> activityNamesForKeys = new ArrayList<>();
     private EditText et_input;
     /**
      * max_select:表示最多可以选择多少个
@@ -48,7 +53,9 @@ public class CustomViewActivity extends AppCompatActivity {
         tfl_custom = (TagFlowLayout) findViewById(R.id.tfl_custom);
 
         addActivityNames();
-        insertView(activityNames, tfl_custom);
+
+        activityNamesForKeys = new ArrayList<String>(activityNames.keySet());
+        insertView(activityNamesForKeys, tfl_custom);
 //        tfl_custom.getAdapter().setSelectedList(new HashSet<Integer>());设置哪一行被选中
 
         skip.setOnClickListener(new View.OnClickListener() {
@@ -85,16 +92,16 @@ public class CustomViewActivity extends AppCompatActivity {
     private boolean findRouterParams(String activityName) {
         if (!TextUtils.isEmpty(activityName)) {
             String paramsPart = "";
-            for (String name : activityNames) {
+            for (String name : activityNamesForKeys) {
                 if (name.contains(activityName)) {
                     paramsPart = name;
-                    System.out.println("<<<>>>需要跳转的类名=" + name);
+                    LogUtils.i(TAG, "需要跳转的类名=" + name);
                     break;
                 }
             }
             if (!TextUtils.isEmpty(paramsPart)) {
                 String params = String.format("activity://%s", paramsPart);
-                System.out.println("<<<>>>跳转参数=" + params);
+                LogUtils.i(TAG, "跳转参数=" + params);
                 Router.open(params);
             }
             return true;
@@ -104,26 +111,29 @@ public class CustomViewActivity extends AppCompatActivity {
     }
 
     private void addActivityNames() {
-        activityNames.add("flexbox");
-        activityNames.add("dialogbasic");
+        activityNames.put("flexbox", FlexboxActivity.class.getSimpleName());
 
-        activityNames.add("drawerlayout");
+        activityNames.put("flexbox2", Flexbox2Activity.class.getSimpleName());
 
-        activityNames.add("imageviewbasic");
+        activityNames.put("dialogbasic", DialogBasicActvitity.class.getSimpleName());
 
-        activityNames.add("linearlayoutbasic");
+        activityNames.put("drawerlayout", DrawerLayoutActivity.class.getSimpleName());
 
-        activityNames.add("partrecycler");
-        activityNames.add("progressbarbasic");
-        activityNames.add("recyclerhome");
-        activityNames.add("renativelayoutbasic");
-        activityNames.add("textviewbasic");
-        activityNames.add("udlrrecycler");
-        activityNames.add("viewpagerbasic");
-        activityNames.add("webviewbasic");
-        activityNames.add("tablayout");
-        activityNames.add("comparator");
-        activityNames.add("math");
+        activityNames.put("imageviewbasic", ImageViewBasicActivity.class.getSimpleName());
+
+        activityNames.put("linearlayoutbasic", LinearLayoutBasicActivity.class.getSimpleName());
+
+        activityNames.put("partrecycler", PartRecyclerActivity.class.getSimpleName());
+        activityNames.put("progressbarbasic", ProgressbarBasicActivity.class.getSimpleName());
+        activityNames.put("recyclerhome", RecyclerHomeActivity.class.getSimpleName());
+        activityNames.put("renativelayoutbasic", RenativeLayoutBasicActivity.class.getSimpleName());
+        activityNames.put("textviewbasic", TextView.class.getSimpleName());
+        activityNames.put("udlrrecycler", UDLRRecyclerActivity.class.getSimpleName());
+        activityNames.put("viewpagerbasic", ViewpagerBasicActivity.class.getSimpleName());
+        activityNames.put("webviewbasic", WebviewBasicActivity.class.getSimpleName());
+        activityNames.put("tablayout", TabLayoutActivity.class.getSimpleName());
+        activityNames.put("comparator", ComparatorActivity.class.getSimpleName());
+        activityNames.put("math", MathActivity.class.getSimpleName());
 
     }
 

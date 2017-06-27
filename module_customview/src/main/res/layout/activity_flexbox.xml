@@ -4,7 +4,6 @@
                                         xmlns:tools="http://schemas.android.com/tools"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:orientation="vertical"
     >
 
 
@@ -14,18 +13,19 @@
         android:orientation="vertical">
 
         <com.google.android.flexbox.FlexboxLayout
-            app:showDivider="middle"
-            app:dividerDrawable="@drawable/shape_divider3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:alignContent="flex_start"
             app:alignItems="stretch"
+            app:dividerDrawable="@drawable/shape_divider3"
             app:flexDirection="row"
             app:flexWrap="wrap"
             app:justifyContent="flex_start"
+            app:showDivider="middle"
             >
 
             <TextView
+                app:layout_alignSelf="stretch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#3f00"
@@ -149,5 +149,22 @@
         </com.google.android.flexbox.FlexboxLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_add_white_24dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_remove_white_24dp"/>
+    </LinearLayout>
 
 </android.support.v4.widget.DrawerLayout>
