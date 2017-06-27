@@ -53,4 +53,9 @@
             <enum name="right" value="1" />
         </attr>
     </declare-styleable>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

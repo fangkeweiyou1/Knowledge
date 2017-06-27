@@ -30,6 +30,9 @@ public class CustomViewActivity extends AppCompatActivity {
 
     private List<String> activityNames = new ArrayList<>();
     private EditText et_input;
+    /**
+     * max_select:表示最多可以选择多少个
+     */
     private TagFlowLayout tfl_custom;
     private LayoutInflater mInflater;
 
@@ -101,10 +104,15 @@ public class CustomViewActivity extends AppCompatActivity {
     }
 
     private void addActivityNames() {
+        activityNames.add("flexbox");
         activityNames.add("dialogbasic");
+
         activityNames.add("drawerlayout");
+
         activityNames.add("imageviewbasic");
+
         activityNames.add("linearlayoutbasic");
+
         activityNames.add("partrecycler");
         activityNames.add("progressbarbasic");
         activityNames.add("recyclerhome");

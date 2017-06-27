@@ -52,6 +52,10 @@
             android:name=".activity.TabLayoutActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
+        <activity
+            android:name=".activity.FlexboxActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

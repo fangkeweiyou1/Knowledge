@@ -16,6 +16,7 @@
     <string name="viewpager_basic">讲解viewpager的一些基本配置</string>
     <string name="webview_basic">讲解webview的一些基本配置</string>
     <string name="tablayout">讲解tablayout的一些基本配置</string>
+    <string name="flexbox">讲解flexbox的一些基本配置</string>
 
 
     <string name="utils_math">math的基本知识</string>
