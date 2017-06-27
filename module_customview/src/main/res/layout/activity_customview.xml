@@ -46,11 +46,24 @@
                 android:textSize="14sp"/>
         </android.support.v7.widget.CardView>
 
+        <ScrollView
+            android:id="@+id/sv_custom"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_above="@+id/cv_custom">
+
+            <com.module_customview.widget.flowlayout.TagFlowLayout
+                android:id="@+id/tfl_custom"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:max_select="-1"></com.module_customview.widget.flowlayout.TagFlowLayout>
+        </ScrollView>
+
         <EditText
             android:id="@+id/et_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/cv_custom"
+            android:layout_above="@+id/sv_custom"
             android:gravity="left|top"
             android:hint="请输入类名"/>
     </RelativeLayout>
