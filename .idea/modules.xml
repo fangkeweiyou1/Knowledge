@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Knowledge.iml" filepath="$PROJECT_DIR$/Knowledge.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commonlibs/commonlibs.iml" filepath="$PROJECT_DIR$/commonlibs/commonlibs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_banner/module_banner.iml" filepath="$PROJECT_DIR$/module_banner/module_banner.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_customview/module_customview.iml" filepath="$PROJECT_DIR$/module_customview/module_customview.iml" />
     </modules>
   </component>

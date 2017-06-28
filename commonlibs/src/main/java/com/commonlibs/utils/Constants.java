@@ -1,4 +1,4 @@
-package com.module_customview.utils;
+package com.commonlibs.utils;
 
 public class Constants {
     /**

@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.module_customview.R;
-import com.module_customview.utils.LogUtils;
+import com.commonlibs.utils.LogUtils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

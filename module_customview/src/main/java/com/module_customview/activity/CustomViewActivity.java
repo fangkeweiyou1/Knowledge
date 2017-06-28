@@ -1,5 +1,7 @@
 package com.module_customview.activity;
 
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +12,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.commonlibs.utils.LogUtils;
 import com.module_customview.R;
-import com.module_customview.utils.LogUtils;
+import com.module_customview.receiver.OpenActivityReceiver;
 import com.module_customview.widget.flowlayout.FlowLayout;
 import com.module_customview.widget.flowlayout.TagAdapter;
 import com.module_customview.widget.flowlayout.TagFlowLayout;
@@ -29,10 +32,12 @@ import cn.campusapp.router.Router;
 
 public class CustomViewActivity extends AppCompatActivity {
     private static final String TAG = "CustomViewActivity";
+    private static final String ACTION_OPEN_BannerActivity = "open_banneractivity";
 
     private TextView skip;
 
     private Map<String, String> activityNames = new LinkedHashMap<>();//LinkedHashMap可以对KEY值顺序取出
+    private Map<String, String> actionActivityNames = new LinkedHashMap<>();//LinkedHashMap可以对KEY值顺序取出
     private List<String> activityNamesForKeys = new ArrayList<>();
     private EditText et_input;
     /**
@@ -95,11 +100,19 @@ public class CustomViewActivity extends AppCompatActivity {
 
 
     private void autoSkip() {
-        String params = "activity://regex";
-        Router.open(params);
+//        String params = "activity://regex";
+//        Router.open(params);
+
+
     }
 
+
     private boolean findRouterParams(String activityName) {
+        if (actionActivityNames.containsKey(activityName)) {
+            openActivityForReceiver(activityName);
+            return true;
+        }
+
         if (!TextUtils.isEmpty(activityName)) {
             String paramsPart = "";
             for (String name : activityNamesForKeys) {
@@ -120,7 +133,27 @@ public class CustomViewActivity extends AppCompatActivity {
         return false;
     }
 
+
+    private void openActivityForReceiver(String activityName) {
+        if (!actionActivityNames.containsKey(activityName))
+            return;
+
+        OpenActivityReceiver cast = new OpenActivityReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(actionActivityNames.get(activityName));
+        registerReceiver(cast, intentFilter);
+
+        Intent intent = new Intent();
+        intent.setAction(actionActivityNames.get(activityName));
+        sendBroadcast(intent);
+
+        unregisterReceiver(cast);
+    }
+
     private void addActivityNames() {
+        activityNames.put("banner", "BannerActivity");
+        actionActivityNames.put("banner", "open_banneractivity");
+
         activityNames.put("regex", RegexActivity.class.getSimpleName());
 
         activityNames.put("flexbox", FlexboxActivity.class.getSimpleName());
@@ -172,5 +205,10 @@ public class CustomViewActivity extends AppCompatActivity {
         };
         mFlowLayout.setAdapter(mAdapter);
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 }

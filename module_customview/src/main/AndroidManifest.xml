@@ -59,6 +59,8 @@
         <activity
             android:name=".activity.RegexActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+
     </application>
 
 </manifest>

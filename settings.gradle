@@ -1,1 +1,1 @@
-include ':app', ':module_customview'
+include ':app', ':module_customview', ':module_banner', ':commonlibs'
