@@ -40,6 +40,7 @@ public class CustomViewActivity extends AppCompatActivity {
      */
     private TagFlowLayout tfl_custom;
     private LayoutInflater mInflater;
+    private boolean isAuto = false;//是否自动跳转
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -85,8 +86,17 @@ public class CustomViewActivity extends AppCompatActivity {
             }
         });
 
+        if (isAuto)
+            autoSkip();
+
 
 //        startActivity(new Intent(this,DrawerLayoutActivity.class));
+    }
+
+
+    private void autoSkip() {
+        String params = "activity://regex";
+        Router.open(params);
     }
 
     private boolean findRouterParams(String activityName) {
@@ -111,6 +121,8 @@ public class CustomViewActivity extends AppCompatActivity {
     }
 
     private void addActivityNames() {
+        activityNames.put("regex", RegexActivity.class.getSimpleName());
+
         activityNames.put("flexbox", FlexboxActivity.class.getSimpleName());
 
         activityNames.put("flexbox2", Flexbox2Activity.class.getSimpleName());

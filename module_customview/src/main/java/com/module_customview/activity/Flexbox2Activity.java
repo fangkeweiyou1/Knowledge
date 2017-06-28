@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.flexbox.AlignItems;
+import com.google.android.flexbox.FlexDirection;
+import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.module_customview.R;
 
@@ -37,27 +40,31 @@ public class Flexbox2Activity extends AppCompatActivity {
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_fiexbox2);
 
-        mLayoutParams=new ArrayList<>();
+        mLayoutParams = new ArrayList<>();
         FlexboxLayoutManager.LayoutParams layoutParams;
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 40; i++) {
 
-            layoutParams=new FlexboxLayoutManager.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+            layoutParams = new FlexboxLayoutManager.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
 //            layoutParams.setFlexBasisPercent(0.25f);//宽度占据父控件比例
 //            layoutParams.setAlignSelf(AlignSelf.STRETCH);//设置对其方式
             layoutParams.setFlexGrow(1);
+            layoutParams.width=20*(i+1);
+            layoutParams.height=30*(i+1);
             mLayoutParams.add(layoutParams);
 
         }
 
 
         mLayoutManager = new FlexboxLayoutManager(this);
+        mLayoutManager.setFlexDirection(FlexDirection.ROW);//设置主轴排列方向
+        mLayoutManager.setFlexWrap(FlexWrap.WRAP);//设置是否换行
+        mLayoutManager.setAlignItems(AlignItems.STRETCH);//设置子控件对齐父控件方式,STRETCH为拉伸
         mAdapter = new FiexboxAdapter();
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
     }
-
 
 
     class FiexboxAdapter extends RecyclerView.Adapter<FiexboxAdapter.FiexboxViewHolder> {

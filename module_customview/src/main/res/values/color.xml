@@ -8,6 +8,7 @@
     <color name="transparency">#00000000</color>
     <color name="transparent">#00000000</color>
     <color name="text_red">#ff0000</color>
+    <color name="text_black">#222222</color>
     <color name="text_gray">#999999</color>
     <color name="white">#ffffff</color>
     <color name="app_bg_red">#db5153</color>
