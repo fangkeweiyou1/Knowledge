@@ -6,6 +6,7 @@
 
     <string name="recyclerview_udrl">可以上下左右滑动的RecyclerView</string>
     <string name="recyclerview_part">部分上下左右滑动的RecyclerView</string>
+    <string name="recyclerview_decoration">讲解分割线的RecyclerView</string>
     <string name="dialog_basic">讲解dialog的一些基本配置</string>
     <string name="textview_basic">讲解textview的一些基本配置</string>
     <string name="imageview_basic">讲解imageview的一些基本配置</string>
@@ -19,6 +20,7 @@
     <string name="flexbox">讲解flexbox的一些基本配置</string>
     <string name="flexbox2">讲解flexbox在RecyclerView中的使用</string>
     <string name="regex">讲解regex的使用范例</string>
+    <string name="learnview">学习自定义view的使用</string>
 
 
     <string name="utils_math">math的基本知识</string>

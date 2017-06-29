@@ -1,4 +1,4 @@
-package com.module_customview.activity;
+package com.module_customview.recyclerview;
 
 import android.content.Intent;
 import android.os.Bundle;

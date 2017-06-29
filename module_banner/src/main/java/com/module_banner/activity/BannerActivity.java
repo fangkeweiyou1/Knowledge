@@ -118,7 +118,7 @@ public class BannerActivity extends AppCompatActivity implements AdapterView.OnI
     protected void onResume() {
         super.onResume();
         //开始自动翻页
-        convenientBanner.startTurning(5000);
+        convenientBanner.startTurning(2000);
     }
 
     // 停止自动翻页

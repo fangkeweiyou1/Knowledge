@@ -5,13 +5,15 @@
               android:orientation="horizontal">
 
     <TextView
+        android:text="position"
         android:id="@+id/tv_name"
         android:layout_width="60dp"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:textColor="#222"/>
+        android:textColor="#f00"/>
 
     <TextView
+        android:text="content"
         android:id="@+id/tv_age"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

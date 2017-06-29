@@ -1,4 +1,4 @@
-package com.module_customview.activity;
+package com.module_customview;
 
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -13,8 +13,26 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.commonlibs.utils.LogUtils;
-import com.module_customview.R;
+import com.module_customview.activity.ComparatorActivity;
+import com.module_customview.activity.DialogBasicActvitity;
+import com.module_customview.activity.DrawerLayoutActivity;
+import com.module_customview.activity.Flexbox2Activity;
+import com.module_customview.activity.FlexboxActivity;
+import com.module_customview.activity.ImageViewBasicActivity;
+import com.module_customview.activity.LinearLayoutBasicActivity;
+import com.module_customview.activity.MathActivity;
+import com.module_customview.activity.ProgressbarBasicActivity;
+import com.module_customview.activity.RegexActivity;
+import com.module_customview.activity.RenativeLayoutBasicActivity;
+import com.module_customview.activity.TabLayoutActivity;
+import com.module_customview.activity.ViewpagerBasicActivity;
+import com.module_customview.activity.WebviewBasicActivity;
+import com.module_customview.customview.LearnViewActivity;
 import com.module_customview.receiver.OpenActivityReceiver;
+import com.module_customview.recyclerview.DecorationRecAct;
+import com.module_customview.recyclerview.PartRecyclerActivity;
+import com.module_customview.recyclerview.RecyclerHomeActivity;
+import com.module_customview.recyclerview.UDLRRecyclerActivity;
 import com.module_customview.widget.flowlayout.FlowLayout;
 import com.module_customview.widget.flowlayout.TagAdapter;
 import com.module_customview.widget.flowlayout.TagFlowLayout;
@@ -30,9 +48,8 @@ import cn.campusapp.router.Router;
  * Created by zhangyuncai on 2017/6/26.
  */
 
-public class CustomViewActivity extends AppCompatActivity {
-    private static final String TAG = "CustomViewActivity";
-    private static final String ACTION_OPEN_BannerActivity = "open_banneractivity";
+public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
 
     private TextView skip;
 
@@ -52,6 +69,8 @@ public class CustomViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customview);
         mInflater = LayoutInflater.from(this);
+
+        Float f = 1.0f;
 
 
         skip = (TextView) findViewById(R.id.skip);
@@ -151,8 +170,18 @@ public class CustomViewActivity extends AppCompatActivity {
     }
 
     private void addActivityNames() {
-        activityNames.put("banner", "BannerActivity");
-        actionActivityNames.put("banner", "open_banneractivity");
+//        activityNames.put("banner", "BannerActivity");
+//        actionActivityNames.put("banner", "open_banneractivity");
+
+//        activityNames.put("musicplayer", "MusicPlayerActivity");
+//        actionActivityNames.put("musicplayer", "open_musicplayeractivity");
+
+//        activityNames.put("special", "SpecialActivity");
+//        actionActivityNames.put("special", "open_specialactivity");
+
+        activityNames.put("learnview", LearnViewActivity.class.getSimpleName());
+
+        activityNames.put("decorationrecyclerview", DecorationRecAct.class.getSimpleName());
 
         activityNames.put("regex", RegexActivity.class.getSimpleName());
 
