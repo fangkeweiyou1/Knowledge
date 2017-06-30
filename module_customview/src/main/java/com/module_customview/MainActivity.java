@@ -28,6 +28,7 @@ import com.module_customview.activity.TabLayoutActivity;
 import com.module_customview.activity.ViewpagerBasicActivity;
 import com.module_customview.activity.WebviewBasicActivity;
 import com.module_customview.customview.LearnViewActivity;
+import com.module_customview.model.Student;
 import com.module_customview.receiver.OpenActivityReceiver;
 import com.module_customview.recyclerview.DecorationRecAct;
 import com.module_customview.recyclerview.PartRecyclerActivity;
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private TagFlowLayout tfl_custom;
     private LayoutInflater mInflater;
-    private boolean isAuto = false;//是否自动跳转
+    private boolean isAuto = true;//是否自动跳转
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -71,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
         mInflater = LayoutInflater.from(this);
 
         Float f = 1.0f;
+
+        Student student=new Student();
+        student.setAge(10);
+        student.setName("姓名");
+        LogUtils.i("<<<>>>",student.getName());
 
 
         skip = (TextView) findViewById(R.id.skip);
@@ -113,20 +119,31 @@ public class MainActivity extends AppCompatActivity {
         if (isAuto)
             autoSkip();
 
-
-//        startActivity(new Intent(this,DrawerLayoutActivity.class));
     }
 
 
     private void autoSkip() {
+        startActivity(new Intent(this,Kotlin01Activity.class));
 //        String params = "activity://regex";
 //        Router.open(params);
 
 
     }
 
+    class MyStudent extends Student{
+
+    }
+
 
     private boolean findRouterParams(String activityName) {
+
+
+        if (TextUtils.equals("kotlin01", activityName)) {
+            LogUtils.i(TAG,"kotlin01");
+            startActivity(new Intent(this,Kotlin01Activity.class));
+            return true;
+        }
+
         if (actionActivityNames.containsKey(activityName)) {
             openActivityForReceiver(activityName);
             return true;
@@ -148,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         }
+
 
         return false;
     }
@@ -178,6 +196,8 @@ public class MainActivity extends AppCompatActivity {
 
 //        activityNames.put("special", "SpecialActivity");
 //        actionActivityNames.put("special", "open_specialactivity");
+
+        activityNames.put("kotlin01", Kotlin01Activity.class.getSimpleName());
 
         activityNames.put("learnview", LearnViewActivity.class.getSimpleName());
 
