@@ -2,11 +2,11 @@ package com.module_customview.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 import com.module_customview.R;
+import com.module_customview.base.BaseActivity;
 import com.module_customview.dialog.ExampleDialog;
 
 /**
@@ -14,7 +14,7 @@ import com.module_customview.dialog.ExampleDialog;
  * 讲解dialog的一些基本配置
  */
 
-public class DialogBasicActvitity extends AppCompatActivity {
+public class DialogBasicActvitity extends BaseActivity {
 
     private Button bt_showdialog;
     private ExampleDialog mExampleDialog;

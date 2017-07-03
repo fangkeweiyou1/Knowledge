@@ -2,7 +2,6 @@ package com.module_customview.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -15,6 +14,7 @@ import com.google.android.flexbox.FlexDirection;
 import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.module_customview.R;
+import com.module_customview.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ import cn.campusapp.router.annotation.RouterMap;
  * Created by zhangyuncai on 2017/6/27.
  */
 @RouterMap({"activity://flexbox2"})
-public class Flexbox2Activity extends AppCompatActivity {
+public class Flexbox2Activity extends BaseActivity {
 
     private RecyclerView mRecyclerView;
     private FlexboxLayoutManager mLayoutManager;

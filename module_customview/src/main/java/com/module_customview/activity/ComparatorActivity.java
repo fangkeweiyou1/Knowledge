@@ -2,7 +2,6 @@ package com.module_customview.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.module_customview.R;
+import com.module_customview.base.BaseActivity;
 import com.module_customview.model.Student;
 
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ import cn.campusapp.router.annotation.RouterMap;
  */
 
 @RouterMap({"activity://comparator"})
-public class ComparatorActivity extends AppCompatActivity {
+public class ComparatorActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView;
     private List<Student> mDadas;

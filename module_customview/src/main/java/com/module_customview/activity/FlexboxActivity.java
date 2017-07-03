@@ -2,9 +2,9 @@ package com.module_customview.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.module_customview.R;
+import com.module_customview.base.BaseActivity;
 
 import cn.campusapp.router.annotation.RouterMap;
 
@@ -12,7 +12,7 @@ import cn.campusapp.router.annotation.RouterMap;
  * Created by zhangyuncai on 2017/6/27.
  */
 @RouterMap({"activity://flexbox"})
-public class FlexboxActivity extends AppCompatActivity {
+public class FlexboxActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

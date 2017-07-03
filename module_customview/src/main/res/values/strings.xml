@@ -27,8 +27,17 @@
     <string name="kotlin_kotlin01">学习kotlin的使用</string>
 
 
+    <string name="utils_sharepre">学习sharepreferences的使用</string>
     <string name="utils_math">math的基本知识</string>
     <string name="utils_Comparator">Comparator的基本知识</string>
+
+
+    <string name="test_1">测试界面1</string>
+    <string name="test_2">测试界面2</string>
+    <string name="test_3">测试界面3</string>
+    <string name="test_4">测试界面4</string>
+    <string name="test_5">测试界面5</string>
+    <string name="test_6">测试界面6</string>
 
 
     <!--专门给Flexbox使用的start-->

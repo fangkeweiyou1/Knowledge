@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
-        android:name=".CustomViewApplication"
+        android:name=".base.CustomViewApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -69,6 +69,34 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Kotlin01Activity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".sharepre.SharepreActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".test.Test1Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".test.Test2Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".test.Test3Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".test.Test4Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".test.Test5Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".test.Test6Activity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

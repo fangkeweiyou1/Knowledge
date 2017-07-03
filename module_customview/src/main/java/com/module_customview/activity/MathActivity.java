@@ -2,10 +2,10 @@ package com.module_customview.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.module_customview.R;
+import com.module_customview.base.BaseActivity;
 
 import cn.campusapp.router.annotation.RouterMap;
 
@@ -14,7 +14,7 @@ import cn.campusapp.router.annotation.RouterMap;
  */
 
 @RouterMap({"activity://math"})
-public class MathActivity extends AppCompatActivity {
+public class MathActivity extends BaseActivity {
     String mathDesc = "";
     private TextView tv_math_content;
 

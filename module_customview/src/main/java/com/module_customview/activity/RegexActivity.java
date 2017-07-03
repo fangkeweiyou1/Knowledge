@@ -2,10 +2,10 @@ package com.module_customview.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
-import com.module_customview.R;
 import com.commonlibs.utils.LogUtils;
+import com.module_customview.R;
+import com.module_customview.base.BaseActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,7 +16,7 @@ import cn.campusapp.router.annotation.RouterMap;
  * Created by zhangyuncai on 2017/6/28.
  */
 @RouterMap({"activity://regex"})
-public class RegexActivity extends AppCompatActivity {
+public class RegexActivity extends BaseActivity {
     private static final String TAG = "RegexActivity";
 
     @Override

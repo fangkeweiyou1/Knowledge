@@ -5,10 +5,10 @@ import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.module_customview.R;
+import com.module_customview.base.BaseActivity;
 
 import cn.campusapp.router.annotation.RouterMap;
 
@@ -17,7 +17,7 @@ import cn.campusapp.router.annotation.RouterMap;
  * 讲解DrawerLayout和ActionBar的基本知识
  */
 @RouterMap({"activity://drawerlayout"})
-public class DrawerLayoutActivity extends AppCompatActivity {
+public class DrawerLayoutActivity extends BaseActivity {
     private ActionBar mActionBar;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;

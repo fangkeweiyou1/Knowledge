@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -13,27 +12,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.commonlibs.utils.LogUtils;
-import com.module_customview.activity.ComparatorActivity;
-import com.module_customview.activity.DialogBasicActvitity;
-import com.module_customview.activity.DrawerLayoutActivity;
-import com.module_customview.activity.Flexbox2Activity;
-import com.module_customview.activity.FlexboxActivity;
-import com.module_customview.activity.ImageViewBasicActivity;
-import com.module_customview.activity.LinearLayoutBasicActivity;
-import com.module_customview.activity.MathActivity;
-import com.module_customview.activity.ProgressbarBasicActivity;
-import com.module_customview.activity.RegexActivity;
-import com.module_customview.activity.RenativeLayoutBasicActivity;
-import com.module_customview.activity.TabLayoutActivity;
-import com.module_customview.activity.ViewpagerBasicActivity;
-import com.module_customview.activity.WebviewBasicActivity;
-import com.module_customview.customview.LearnViewActivity;
+import com.module_customview.base.BaseActivity;
 import com.module_customview.model.Student;
 import com.module_customview.receiver.OpenActivityReceiver;
-import com.module_customview.recyclerview.DecorationRecAct;
-import com.module_customview.recyclerview.PartRecyclerActivity;
-import com.module_customview.recyclerview.RecyclerHomeActivity;
-import com.module_customview.recyclerview.UDLRRecyclerActivity;
+import com.module_customview.sharepre.SharepreActivity;
+import com.module_customview.test.Test1Activity;
+import com.module_customview.test.Test2Activity;
+import com.module_customview.test.Test3Activity;
+import com.module_customview.test.Test4Activity;
+import com.module_customview.test.Test5Activity;
+import com.module_customview.test.Test6Activity;
 import com.module_customview.widget.flowlayout.FlowLayout;
 import com.module_customview.widget.flowlayout.TagAdapter;
 import com.module_customview.widget.flowlayout.TagFlowLayout;
@@ -49,7 +37,7 @@ import cn.campusapp.router.Router;
  * Created by zhangyuncai on 2017/6/26.
  */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private static final String TAG = "MainActivity";
 
     private TextView skip;
@@ -70,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customview);
         mInflater = LayoutInflater.from(this);
+
 
         Float f = 1.0f;
 
@@ -197,37 +186,45 @@ public class MainActivity extends AppCompatActivity {
 //        activityNames.put("special", "SpecialActivity");
 //        actionActivityNames.put("special", "open_specialactivity");
 
-        activityNames.put("kotlin01", Kotlin01Activity.class.getSimpleName());
+//        activityNames.put("kotlin01", Kotlin01Activity.class.getSimpleName());
 
-        activityNames.put("learnview", LearnViewActivity.class.getSimpleName());
-
-        activityNames.put("decorationrecyclerview", DecorationRecAct.class.getSimpleName());
-
-        activityNames.put("regex", RegexActivity.class.getSimpleName());
-
-        activityNames.put("flexbox", FlexboxActivity.class.getSimpleName());
-
-        activityNames.put("flexbox2", Flexbox2Activity.class.getSimpleName());
-
-        activityNames.put("dialogbasic", DialogBasicActvitity.class.getSimpleName());
-
-        activityNames.put("drawerlayout", DrawerLayoutActivity.class.getSimpleName());
-
-        activityNames.put("imageviewbasic", ImageViewBasicActivity.class.getSimpleName());
-
-        activityNames.put("linearlayoutbasic", LinearLayoutBasicActivity.class.getSimpleName());
-
-        activityNames.put("partrecycler", PartRecyclerActivity.class.getSimpleName());
-        activityNames.put("progressbarbasic", ProgressbarBasicActivity.class.getSimpleName());
-        activityNames.put("recyclerhome", RecyclerHomeActivity.class.getSimpleName());
-        activityNames.put("renativelayoutbasic", RenativeLayoutBasicActivity.class.getSimpleName());
-        activityNames.put("textviewbasic", TextView.class.getSimpleName());
-        activityNames.put("udlrrecycler", UDLRRecyclerActivity.class.getSimpleName());
-        activityNames.put("viewpagerbasic", ViewpagerBasicActivity.class.getSimpleName());
-        activityNames.put("webviewbasic", WebviewBasicActivity.class.getSimpleName());
-        activityNames.put("tablayout", TabLayoutActivity.class.getSimpleName());
-        activityNames.put("comparator", ComparatorActivity.class.getSimpleName());
-        activityNames.put("math", MathActivity.class.getSimpleName());
+        activityNames.put("sharepre", SharepreActivity.class.getSimpleName());
+        activityNames.put("test1", Test1Activity.class.getSimpleName());
+        activityNames.put("test2", Test2Activity.class.getSimpleName());
+        activityNames.put("test3", Test3Activity.class.getSimpleName());
+        activityNames.put("test4", Test4Activity.class.getSimpleName());
+        activityNames.put("test5", Test5Activity.class.getSimpleName());
+        activityNames.put("test6", Test6Activity.class.getSimpleName());
+//
+//        activityNames.put("learnview", LearnViewActivity.class.getSimpleName());
+//
+//        activityNames.put("decorationrecyclerview", DecorationRecAct.class.getSimpleName());
+//
+//        activityNames.put("regex", RegexActivity.class.getSimpleName());
+//
+//        activityNames.put("flexbox", FlexboxActivity.class.getSimpleName());
+//
+//        activityNames.put("flexbox2", Flexbox2Activity.class.getSimpleName());
+//
+//        activityNames.put("dialogbasic", DialogBasicActvitity.class.getSimpleName());
+//
+//        activityNames.put("drawerlayout", DrawerLayoutActivity.class.getSimpleName());
+//
+//        activityNames.put("imageviewbasic", ImageViewBasicActivity.class.getSimpleName());
+//
+//        activityNames.put("linearlayoutbasic", LinearLayoutBasicActivity.class.getSimpleName());
+//
+//        activityNames.put("partrecycler", PartRecyclerActivity.class.getSimpleName());
+//        activityNames.put("progressbarbasic", ProgressbarBasicActivity.class.getSimpleName());
+//        activityNames.put("recyclerhome", RecyclerHomeActivity.class.getSimpleName());
+//        activityNames.put("renativelayoutbasic", RenativeLayoutBasicActivity.class.getSimpleName());
+//        activityNames.put("textviewbasic", TextView.class.getSimpleName());
+//        activityNames.put("udlrrecycler", UDLRRecyclerActivity.class.getSimpleName());
+//        activityNames.put("viewpagerbasic", ViewpagerBasicActivity.class.getSimpleName());
+//        activityNames.put("webviewbasic", WebviewBasicActivity.class.getSimpleName());
+//        activityNames.put("tablayout", TabLayoutActivity.class.getSimpleName());
+//        activityNames.put("comparator", ComparatorActivity.class.getSimpleName());
+//        activityNames.put("math", MathActivity.class.getSimpleName());
 
     }
 

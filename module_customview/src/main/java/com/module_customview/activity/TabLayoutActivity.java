@@ -6,13 +6,13 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.module_customview.R;
+import com.module_customview.base.BaseActivity;
 
 import cn.campusapp.router.annotation.RouterMap;
 
@@ -20,7 +20,7 @@ import cn.campusapp.router.annotation.RouterMap;
  * Created by zhangyuncai on 2017/6/27.
  */
 @RouterMap({"activity://tablayout"})
-public class TabLayoutActivity extends AppCompatActivity {
+public class TabLayoutActivity extends BaseActivity {
 //    @BindView(R.id.tab_tablayout)
 //    TabLayout tab_tablayout;
 //    @BindView(R.id.tab_viewpager)

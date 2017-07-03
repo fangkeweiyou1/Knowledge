@@ -51,6 +51,8 @@ dependencies {
 //        compile project(':module_banner')
 //    compile project(':musicplayer')
 //    compile project(':module_specialview')
+
+    compile 'org.greenrobot:eventbus:3.0.0'
 }
 repositories {
     mavenCentral()
