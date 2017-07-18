@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/white"
-              android:orientation="vertical"
-              tools:context=".test.Test1Activity">
+              xmlns:tools="http://schemas.android.com/tools"
+              tools:context=".activity.ExceptionActivity"
+              android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,21 +15,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/test_1"
+            android:text="@string/exception"
             android:textColor="@color/text_black"
             android:textSize="14sp"/>
     </RelativeLayout>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="skipTest2"
-        android:text="跳转到test2界面"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="200dp"
-        android:background="#30f0"/>
 
 </LinearLayout>

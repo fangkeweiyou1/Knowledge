@@ -11,9 +11,17 @@ import com.commonlibs.utils.AppDavikActivityMgr;
  */
 
 public class BaseActivity extends AppCompatActivity {
+    public static final String TAG = "-----------<<<>>>------------";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppDavikActivityMgr.getScreenManager().addActivity(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        AppDavikActivityMgr.getScreenManager().removeActivity(this);
     }
 }

@@ -12,16 +12,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.commonlibs.utils.LogUtils;
+import com.module_customview.activity.DialogBasicActvitity;
+import com.module_customview.activity.ExceptionActivity;
+import com.module_customview.activity.PickerActivity;
+import com.module_customview.activity.TextBasicActivity;
 import com.module_customview.base.BaseActivity;
 import com.module_customview.model.Student;
 import com.module_customview.receiver.OpenActivityReceiver;
-import com.module_customview.sharepre.SharepreActivity;
 import com.module_customview.test.Test1Activity;
-import com.module_customview.test.Test2Activity;
-import com.module_customview.test.Test3Activity;
-import com.module_customview.test.Test4Activity;
-import com.module_customview.test.Test5Activity;
-import com.module_customview.test.Test6Activity;
 import com.module_customview.widget.flowlayout.FlowLayout;
 import com.module_customview.widget.flowlayout.TagAdapter;
 import com.module_customview.widget.flowlayout.TagFlowLayout;
@@ -58,14 +56,6 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customview);
         mInflater = LayoutInflater.from(this);
-
-
-        Float f = 1.0f;
-
-        Student student=new Student();
-        student.setAge(10);
-        student.setName("姓名");
-        LogUtils.i("<<<>>>",student.getName());
 
 
         skip = (TextView) findViewById(R.id.skip);
@@ -112,14 +102,20 @@ public class MainActivity extends BaseActivity {
 
 
     private void autoSkip() {
-        startActivity(new Intent(this,Kotlin01Activity.class));
+//        startActivity(new Intent(this,Kotlin01Activity.class));
+//        startActivity(new Intent(this, PickerActivity.class));
+        startActivity(new Intent(this, ExceptionActivity.class));
+//        startActivity(new Intent(this,TextUtilActivity.class));
+//        startActivity(new Intent(this,DialogBasicActvitity.class));
+//        startActivity(new Intent(this,AnimationActivity.class));
+//        startActivity(new Intent(this,TextBasicActivity.class));
 //        String params = "activity://regex";
 //        Router.open(params);
 
 
     }
 
-    class MyStudent extends Student{
+    class MyStudent extends Student {
 
     }
 
@@ -128,8 +124,8 @@ public class MainActivity extends BaseActivity {
 
 
         if (TextUtils.equals("kotlin01", activityName)) {
-            LogUtils.i(TAG,"kotlin01");
-            startActivity(new Intent(this,Kotlin01Activity.class));
+            LogUtils.i(TAG, "kotlin01");
+            startActivity(new Intent(this, Kotlin01Activity.class));
             return true;
         }
 
@@ -188,13 +184,18 @@ public class MainActivity extends BaseActivity {
 
 //        activityNames.put("kotlin01", Kotlin01Activity.class.getSimpleName());
 
-        activityNames.put("sharepre", SharepreActivity.class.getSimpleName());
+//        activityNames.put("textutil", TextUtilActivity.class.getSimpleName());
+//        activityNames.put("studyjava", StudyJavaActivity.class.getSimpleName());
+//        activityNames.put("sharepre", SharepreActivity.class.getSimpleName());
+        activityNames.put("picker", PickerActivity.class.getSimpleName());
+        activityNames.put("exception", ExceptionActivity.class.getSimpleName());
         activityNames.put("test1", Test1Activity.class.getSimpleName());
-        activityNames.put("test2", Test2Activity.class.getSimpleName());
-        activityNames.put("test3", Test3Activity.class.getSimpleName());
-        activityNames.put("test4", Test4Activity.class.getSimpleName());
-        activityNames.put("test5", Test5Activity.class.getSimpleName());
-        activityNames.put("test6", Test6Activity.class.getSimpleName());
+//        activityNames.put("test2", Test2Activity.class.getSimpleName());
+//        activityNames.put("test3", Test3Activity.class.getSimpleName());
+//        activityNames.put("test3", Test3Activity.class.getSimpleName());
+//        activityNames.put("test4", Test4Activity.class.getSimpleName());
+//        activityNames.put("test5", Test5Activity.class.getSimpleName());
+//        activityNames.put("test6", Test6Activity.class.getSimpleName());
 //
 //        activityNames.put("learnview", LearnViewActivity.class.getSimpleName());
 //
@@ -206,7 +207,8 @@ public class MainActivity extends BaseActivity {
 //
 //        activityNames.put("flexbox2", Flexbox2Activity.class.getSimpleName());
 //
-//        activityNames.put("dialogbasic", DialogBasicActvitity.class.getSimpleName());
+        activityNames.put("dialogbasic", DialogBasicActvitity.class.getSimpleName());
+//        activityNames.put("animation", AnimationActivity.class.getSimpleName());
 //
 //        activityNames.put("drawerlayout", DrawerLayoutActivity.class.getSimpleName());
 //
@@ -218,7 +220,7 @@ public class MainActivity extends BaseActivity {
 //        activityNames.put("progressbarbasic", ProgressbarBasicActivity.class.getSimpleName());
 //        activityNames.put("recyclerhome", RecyclerHomeActivity.class.getSimpleName());
 //        activityNames.put("renativelayoutbasic", RenativeLayoutBasicActivity.class.getSimpleName());
-//        activityNames.put("textviewbasic", TextView.class.getSimpleName());
+        activityNames.put("textviewbasic", TextBasicActivity.class.getSimpleName());
 //        activityNames.put("udlrrecycler", UDLRRecyclerActivity.class.getSimpleName());
 //        activityNames.put("viewpagerbasic", ViewpagerBasicActivity.class.getSimpleName());
 //        activityNames.put("webviewbasic", WebviewBasicActivity.class.getSimpleName());

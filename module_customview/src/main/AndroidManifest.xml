@@ -71,7 +71,7 @@
             android:name=".Kotlin01Activity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".sharepre.SharepreActivity"
+            android:name=".utils.sharepre.SharepreActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
@@ -97,6 +97,26 @@
         </activity>
         <activity
             android:name=".test.Test6Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".utils.textutils.TextUtilActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="javastudy.StudyJavaActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activity.AnimationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activity.PickerActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activity.ExceptionActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

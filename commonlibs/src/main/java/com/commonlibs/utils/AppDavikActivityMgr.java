@@ -2,11 +2,13 @@ package com.commonlibs.utils;
 
 
 import android.app.Activity;
+import android.text.TextUtils;
 
 import java.util.Stack;
 
 /**
  * 主要功能: 管理和回收Act
+ *
  * @Prject: CommonUtilLibrary
  * @Package: com.jingewenku.abrahamcaijin.commonutil
  * @author: AbrahamCaiJin
@@ -17,7 +19,7 @@ import java.util.Stack;
  */
 public class AppDavikActivityMgr {
 
-    
+
     //存储ActivityStack
     private static Stack<Activity> activityStack = new Stack<Activity>();
 
@@ -27,6 +29,7 @@ public class AppDavikActivityMgr {
 
     /**
      * 单列堆栈集合对象
+     *
      * @return AppDavikActivityMgr 单利堆栈集合对象
      */
     public static AppDavikActivityMgr getScreenManager() {
@@ -35,21 +38,22 @@ public class AppDavikActivityMgr {
         }
         return instance;
     }
-    
+
 
     /**
      * 堆栈中销毁并移除
+     *
      * @param activity 指定Act对象
      */
     public void removeActivity(Activity activity) {
         AppLogMessageMgr.i("AppDavikActivityMgr-->>removeActivity", activity != null ? activity.toString() : "");
         if (null != activity) {
             activityStack.remove(activity);
-            activity.finish();
-            activity = null;
+        }
+        for (Activity activity1 : activityStack) {
+            LogUtils.i("<<<>>>", "现在存在的activity名:" + activity1.getClass().getSimpleName());
         }
     }
-
 
 
     /**
@@ -57,17 +61,17 @@ public class AppDavikActivityMgr {
      */
     public void removeAllActivity() {
         if (null != activityStack && activityStack.size() > 0) {
-                //创建临时集合对象
-                Stack<Activity> activityTemp = new Stack<Activity>();
-                for (Activity activity : activityStack) {
-                    if (null != activity) {
-                        //添加到临时集合中
-                        activityTemp.add(activity);
-                        //结束Activity
-                        activity.finish();
-                    }
+            //创建临时集合对象
+            Stack<Activity> activityTemp = new Stack<Activity>();
+            for (Activity activity : activityStack) {
+                if (null != activity) {
+                    //添加到临时集合中
+                    activityTemp.add(activity);
+                    //结束Activity
+                    activity.finish();
                 }
-                activityStack.removeAll(activityTemp);
+            }
+            activityStack.removeAll(activityTemp);
         }
         AppLogMessageMgr.i("AppDavikActivityMgr-->>removeAllActivity", "removeAllActivity");
         System.gc();
@@ -77,11 +81,12 @@ public class AppDavikActivityMgr {
 
     /**
      * 获取当前Act对象
+     *
      * @return Activity 当前act
      */
     public Activity currentActivity() {
         Activity activity = null;
-        if (!activityStack.empty()){
+        if (!activityStack.empty()) {
             activity = activityStack.lastElement();
         }
         AppLogMessageMgr.i("AppDavikActivityMgr-->>currentActivity", activity + "");
@@ -91,6 +96,7 @@ public class AppDavikActivityMgr {
 
     /**
      * 获得当前Act的类名
+     *
      * @return String
      */
     public String getCurrentActivityName() {
@@ -105,20 +111,26 @@ public class AppDavikActivityMgr {
 
     /**
      * 将Act纳入推栈集合中
+     *
      * @param activity Act对象
      */
     public void addActivity(Activity activity) {
-        AppLogMessageMgr.i("AppDavikActivityMgr-->>addActivity",  activity != null ? activity.toString() : "");
+        AppLogMessageMgr.i("AppDavikActivityMgr-->>addActivity", activity != null ? activity.toString() : "");
         if (null == activityStack) {
             activityStack = new Stack<Activity>();
         }
+        if (hasActivity(activity.getClass().getSimpleName()))
+            return;
         activityStack.add(activity);
+        for (Activity activity1 : activityStack) {
+            LogUtils.i("<<<>>>", "现在存在的activity名:" + activity1.getClass().getSimpleName());
+        }
     }
-    
-    
+
 
     /**
      * 退出栈中所有Activity
+     *
      * @param cls
      * @return void
      */
@@ -138,5 +150,23 @@ public class AppDavikActivityMgr {
         System.exit(0);
     }
 
-    
+    /**
+     * Activity堆栈中是否含有指定的Activity
+     *
+     * @param activitySimpleName
+     * @return
+     */
+    public boolean hasActivity(String activitySimpleName) {
+        if (activityStack != null && !activityStack.empty()) {
+            for (Activity activity : activityStack) {
+                if (TextUtils.equals(activity.getClass().getSimpleName(), activitySimpleName))
+                    return true;
+            }
+        }
+
+        return false;
+
+    }
+
+
 }

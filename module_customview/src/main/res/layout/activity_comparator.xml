@@ -32,6 +32,20 @@
         android:text="重置数据"
         android:textColor="#222"/>
 
+    <Button
+        android:id="@+id/bt_additem"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="+"
+        android:textColor="#222"/>
+
+    <Button
+        android:id="@+id/bt_deleteitem"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="+"
+        android:textColor="#222"/>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_comparator"

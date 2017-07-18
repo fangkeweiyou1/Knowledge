@@ -10,6 +10,14 @@ public class Student {
     private int age;
     private String name;
 
+    {
+        System.out.println("<<<>>>构造代码块");//构造代码块优先于构造函数执行,用于提取所有构造函数共性
+    }
+
+    public Student() {
+        System.out.println("构造函数");
+    }
+
     public int getAge() {
         return age;
     }

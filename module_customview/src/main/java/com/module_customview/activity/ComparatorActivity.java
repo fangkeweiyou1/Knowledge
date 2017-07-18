@@ -33,6 +33,8 @@ public class ComparatorActivity extends BaseActivity {
     private List<Student> mDadas;
     private Button bt_sort;
     private Button bt_resetdatas;
+    private Button bt_additem;
+    private Button bt_deleteitem;
     private ComparatorAdapter mAdapter;
 
     @Override
@@ -42,6 +44,8 @@ public class ComparatorActivity extends BaseActivity {
 
         bt_sort = (Button) findViewById(R.id.bt_sort);
         bt_resetdatas = (Button) findViewById(R.id.bt_resetdatas);
+        bt_additem = (Button) findViewById(R.id.bt_additem);
+        bt_deleteitem = (Button) findViewById(R.id.bt_deleteitem);
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_comparator);
 
         addDatas();
@@ -65,6 +69,27 @@ public class ComparatorActivity extends BaseActivity {
             public void onClick(View v) {
                 addDatas();
                 mAdapter.notifyDataSetChanged();
+            }
+        });
+
+        bt_additem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Student student = new Student();
+                student.setName("这是新增的");
+                student.setAge(200);
+                mDadas.add(0, student);
+                mAdapter.notifyItemInserted(0);
+                mRecyclerView.scrollToPosition(0);
+            }
+        });
+
+        bt_deleteitem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDadas.remove(0);
+                mAdapter.notifyItemRemoved(0);
+
             }
         });
 

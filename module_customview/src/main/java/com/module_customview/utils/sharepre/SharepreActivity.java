@@ -1,4 +1,4 @@
-package com.module_customview.sharepre;
+package com.module_customview.utils.sharepre;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

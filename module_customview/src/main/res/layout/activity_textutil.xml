@@ -10,18 +10,12 @@
         android:background="@color/bg_gray">
 
         <TextView
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/test_3"
+            android:text="@string/utils_textutil"
             android:textColor="@color/text_black"
             android:textSize="14sp"/>
     </RelativeLayout>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="skipTest1"
-        android:text="跳转到test1界面"/>
 
 </LinearLayout>

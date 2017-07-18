@@ -2,9 +2,14 @@ package com.module_customview.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.os.Handler;
+import android.os.Message;
+import android.os.SystemClock;
 import android.view.Gravity;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.module_customview.R;
 
@@ -13,6 +18,8 @@ import com.module_customview.R;
  */
 
 public class ExampleDialog extends Dialog {
+
+    private TextView tv_test;
 
     public ExampleDialog(Context context) {
         super(context, R.style.MMTheme_DataSheet);
@@ -37,8 +44,33 @@ public class ExampleDialog extends Dialog {
         window.setAttributes(lp);
         window.setWindowAnimations(R.style.popup_animation_updown);
 
-        setContentView(R.layout.dialog_example);
+        View view = View.inflate(getContext(), R.layout.dialog_example, null);
+
+        tv_test = (TextView) view.findViewById(R.id.tv_test);
+
+        setContentView(view);
+
+        Thread thread = new Thread() {
+            @Override
+            public void run() {
+                SystemClock.sleep(2000);
+                mHandler.sendEmptyMessage(100);
+            }
+        };
+
+        thread.start();
 
 
     }
+
+    Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 100:
+                    tv_test.setVisibility(View.VISIBLE);
+                    break;
+            }
+        }
+    };
 }

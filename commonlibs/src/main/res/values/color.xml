@@ -13,5 +13,6 @@
     <color name="white">#ffffff</color>
     <color name="app_bg_red">#db5153</color>
     <color name="line_gray0">#e7e7e7</color>
+    <color name="line_gray2">#d0d0d0</color>
     <color name="bg_gray">#eeeeee</color>
 </resources>

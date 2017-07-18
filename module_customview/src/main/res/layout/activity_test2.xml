@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/white"
               android:orientation="vertical">
 
     <RelativeLayout
@@ -17,5 +18,17 @@
             android:textColor="@color/text_black"
             android:textSize="14sp"/>
     </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="skipTest1"
+        android:text="跳转到test1界面"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="#3f00"
+        android:layout_marginTop="200dp"
+        android:layout_height="50dp"/>
 
 </LinearLayout>
