@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.commonlibs.utils.LogUtils;
 import com.module_customview.R;
@@ -27,12 +29,24 @@ public class Test1Activity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test1);
 
-        EventBus.getDefault().register(this);
-        LogUtils.i(TAG, "onCreate");
+        RelativeLayout rl_layout= (RelativeLayout) findViewById(R.id.rl_layout);
+        TextView item_add_member_tab5= (TextView) View.inflate(this,R.layout.item_add_member_tab5,null);
+        item_add_member_tab5.setText("测试");
+        item_add_member_tab5.setTag(10001);
+        rl_layout.addView(item_add_member_tab5);
 
-        String str = "woaini\nniaiwo";
-        str = str.replace("\n", "");
-        System.out.println("<<<>>>==" + str);
+        TextView textView = (TextView) rl_layout.findViewWithTag(10001);
+        if(textView!=null)
+        {
+            textView.setText("测试e");
+        }
+
+        EventBus.getDefault().register(this);
+//        LogUtils.i(TAG, "onCreate");
+//
+//        String str = "woaini\nniaiwo";
+//        str = str.replace("\n", "");
+//        System.out.println("<<<>>>==" + str);
 
     }
 

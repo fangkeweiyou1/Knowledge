@@ -25,7 +25,7 @@ public class SharepreActivity extends BaseActivity {
 //
 //        LogUtils.i("<<<>>>", "str=" + str);
 
-//        AppToastMgr.ToastShortTopCenter(this,str);
+//        ToastUtils.ToastShortTopCenter(this,str);
 
         AppNetworkMgr.getNetworkState(this);
     }

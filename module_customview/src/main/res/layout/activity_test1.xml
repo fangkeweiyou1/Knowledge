@@ -8,6 +8,7 @@
               tools:context=".test.Test1Activity">
 
     <RelativeLayout
+        android:id="@+id/rl_layout"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:background="@color/bg_gray">

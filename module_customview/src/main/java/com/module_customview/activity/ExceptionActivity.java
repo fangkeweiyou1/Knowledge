@@ -28,6 +28,26 @@ public class ExceptionActivity extends BaseActivity {
             LogUtils.i(TAG, e.toString());
             LogUtils.i(TAG, "进入自定义异常了");
         }
+
+        try {
+
+        } catch (Exception e) {
+
+        }
+
+        try {
+
+        } catch (Exception e) {
+
+        } finally {
+
+        }
+
+        try {
+
+        } finally {
+
+        }
     }
 
     private void test(int a, int b) throws CustomException {

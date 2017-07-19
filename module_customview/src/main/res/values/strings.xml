@@ -22,9 +22,15 @@
     <string name="regex">讲解regex的使用范例</string>
     <string name="learnview">学习自定义view的使用</string>
     <string name="animation">学习animation的使用</string>
-    <string name="picker">学习picker的使用</string>
     <string name="exception">学习exception的使用</string>
 
+    <string name="picker">学习picker的使用</string>
+
+    <string name="picker_time">时间选择器</string>
+    <string name="picker_province">条件选择器</string>
+
+    <string name="picker_custom_time">时间选择器自定义布局</string>
+    <string name="picker_custom_province">条件选择器自定义布局</string>
 
     <string name="kotlin_kotlin01">学习kotlin的使用</string>
 

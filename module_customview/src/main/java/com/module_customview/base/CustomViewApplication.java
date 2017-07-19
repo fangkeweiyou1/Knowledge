@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
+import com.commonlibs.utils.ToastUtils;
+
 import cn.campusapp.router.Router;
 
 /**
@@ -27,6 +29,8 @@ public class CustomViewApplication extends Application {
 
 
         Router.initActivityRouter(mContext);
+
+        ToastUtils.application=this;
     }
 
 

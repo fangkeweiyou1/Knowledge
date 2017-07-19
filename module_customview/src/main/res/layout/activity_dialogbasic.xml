@@ -22,10 +22,28 @@
             android:textSize="14sp"/>
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/bt_showdialog"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="弹出dialog"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_showdialog"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="弹出dialog"/>
+
+            <Button
+                android:id="@+id/bt_showdialog2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="弹出dialog2"/>
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>
