@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:animateLayoutChanges="true"
               android:orientation="vertical">
 
     <RelativeLayout
@@ -20,11 +21,11 @@
     </RelativeLayout>
 
     <TextView
-        android:text="这是内容"
-        android:gravity="center"
         android:id="@+id/tv_content"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:gravity="center"
+        android:text="这是内容"
         android:textColor="#222"
         android:textSize="14sp"/>
 
@@ -32,11 +33,20 @@
         android:id="@+id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:ellipsize="marquee"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:marqueeRepeatLimit="marquee_forever"
-        android:ellipsize="marquee"
         android:singleLine="true"
-        android:text="那么什么是成功的人生，什么样的人又是成功人士呢？像科技界的比尔？盖茨 ，乔布斯 ，商界的巴菲特以及娱乐、体育界的大腕，无疑会被人们视为是成功者。但对于普通民众，如果用比尔？盖茨那样的标准来衡量是否成功似乎有些太苛刻，也不现实。在某种观念中，一个人的成功似乎与财富分不开的。很多国人到美国看到华人最常说的一句话是，你是个成功人士。为什么这么说？因为你能住300平方米、价值百万美元的房子，因为你开的车是奔驰 、宝马等豪华车，因为你有好的工作，年薪至少在10万美元以上。这也许是很多国人看待一个人成功与否的主要标志。但在美国人眼里，成功并不是与拥有众多财富密不可分。在1980年代，多数美国人把拥有更多财富看成人生成功的一个主要标志。而在一项最新的调查中，对于美国人来说，财富不再是成功的最重要组成部分。调查中22个成功人生的潜在组成因素中，“有很多钱”仅排名在第20位。" />
+        android:text="那么什么是成功的人生，什么样的人又是成功人士呢？像科技界的比尔？盖茨 ，乔布斯 ，商界的巴菲特以及娱乐、体育界的大腕，无疑会被人们视为是成功者。但对于普通民众，如果用比尔？盖茨那样的标准来衡量是否成功似乎有些太苛刻，也不现实。在某种观念中，一个人的成功似乎与财富分不开的。很多国人到美国看到华人最常说的一句话是，你是个成功人士。为什么这么说？因为你能住300平方米、价值百万美元的房子，因为你开的车是奔驰 、宝马等豪华车，因为你有好的工作，年薪至少在10万美元以上。这也许是很多国人看待一个人成功与否的主要标志。但在美国人眼里，成功并不是与拥有众多财富密不可分。在1980年代，多数美国人把拥有更多财富看成人生成功的一个主要标志。而在一项最新的调查中，对于美国人来说，财富不再是成功的最重要组成部分。调查中22个成功人生的潜在组成因素中，“有很多钱”仅排名在第20位。"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="#3f00"
+        android:includeFontPadding="false"
+        android:text="这里是内容"/>
 
 </LinearLayout>

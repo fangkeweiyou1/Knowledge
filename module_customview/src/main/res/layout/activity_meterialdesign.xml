@@ -24,7 +24,9 @@
         android:id="@+id/lv_meterial"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"></ListView>
+        android:clipToPadding="false"
+        android:paddingTop="10dp"
+        android:visibility="visible"></ListView>
 
 
     <com.gc.materialdesign.views.ScrollView
