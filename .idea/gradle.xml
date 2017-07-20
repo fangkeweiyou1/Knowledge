@@ -11,8 +11,6 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/commonlibs" />
             <option value="$PROJECT_DIR$/module_customview" />
-            <option value="$PROJECT_DIR$/module_specialview" />
-            <option value="$PROJECT_DIR$/musicplayer" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

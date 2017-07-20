@@ -13,15 +13,14 @@ import android.widget.TextView;
 
 import com.commonlibs.utils.LogUtils;
 import com.module_customview.activity.DialogBasicActvitity;
-import com.module_customview.activity.ExceptionActivity;
 import com.module_customview.activity.ImageViewBasicActivity;
+import com.module_customview.activity.MeterialDesignActivity;
 import com.module_customview.activity.PickerActivity;
-import com.module_customview.activity.TextBasicActivity;
+import com.module_customview.activity.TextViewActivity;
 import com.module_customview.base.BaseActivity;
 import com.module_customview.model.Student;
 import com.module_customview.receiver.OpenActivityReceiver;
 import com.module_customview.test.Test1Activity;
-import com.module_customview.utils.textutils.TextUtilActivity;
 import com.module_customview.widget.flowlayout.FlowLayout;
 import com.module_customview.widget.flowlayout.TagAdapter;
 import com.module_customview.widget.flowlayout.TagFlowLayout;
@@ -32,6 +31,9 @@ import java.util.List;
 import java.util.Map;
 
 import cn.campusapp.router.Router;
+import javastudy.ExceptionActivity;
+import javastudy.StudyJavaActivity;
+import javastudy.TextUtilActivity;
 
 /**
  * Created by zhangyuncai on 2017/6/26.
@@ -105,13 +107,13 @@ public class MainActivity extends BaseActivity {
 
     private void autoSkip() {
 //        startActivity(new Intent(this,Kotlin01Activity.class));
-        startActivity(new Intent(this, ImageViewBasicActivity.class));
+        startActivity(new Intent(this, TextUtilActivity.class));
 //        startActivity(new Intent(this, ExceptionActivity.class));
 //        startActivity(new Intent(this, DialogBasicActvitity.class));
 //        startActivity(new Intent(this,TextUtilActivity.class));
 //        startActivity(new Intent(this,DialogBasicActvitity.class));
 //        startActivity(new Intent(this,AnimationActivity.class));
-//        startActivity(new Intent(this,TextBasicActivity.class));
+//        startActivity(new Intent(this,TextViewActivity.class));
 //        String params = "activity://regex";
 //        Router.open(params);
 
@@ -188,10 +190,15 @@ public class MainActivity extends BaseActivity {
 //        activityNames.put("kotlin01", Kotlin01Activity.class.getSimpleName());
 
         activityNames.put("textutil", TextUtilActivity.class.getSimpleName());
-//        activityNames.put("studyjava", StudyJavaActivity.class.getSimpleName());
+
+        //TODO:学习java
+        activityNames.put("studyjava", StudyJavaActivity.class.getSimpleName());
 //        activityNames.put("sharepre", SharepreActivity.class.getSimpleName());
         activityNames.put("picker", PickerActivity.class.getSimpleName());
+
+        //TODO:学习异常
         activityNames.put("exception", ExceptionActivity.class.getSimpleName());
+        activityNames.put("meterialdesign", MeterialDesignActivity.class.getSimpleName());
         activityNames.put("test1", Test1Activity.class.getSimpleName());
 //        activityNames.put("test2", Test2Activity.class.getSimpleName());
 //        activityNames.put("test3", Test3Activity.class.getSimpleName());
@@ -223,7 +230,7 @@ public class MainActivity extends BaseActivity {
 //        activityNames.put("progressbarbasic", ProgressbarBasicActivity.class.getSimpleName());
 //        activityNames.put("recyclerhome", RecyclerHomeActivity.class.getSimpleName());
 //        activityNames.put("renativelayoutbasic", RenativeLayoutBasicActivity.class.getSimpleName());
-        activityNames.put("textviewbasic", TextBasicActivity.class.getSimpleName());
+        activityNames.put("textviewbasic", TextViewActivity.class.getSimpleName());
 //        activityNames.put("udlrrecycler", UDLRRecyclerActivity.class.getSimpleName());
 //        activityNames.put("viewpagerbasic", ViewpagerBasicActivity.class.getSimpleName());
 //        activityNames.put("webviewbasic", WebviewBasicActivity.class.getSimpleName());

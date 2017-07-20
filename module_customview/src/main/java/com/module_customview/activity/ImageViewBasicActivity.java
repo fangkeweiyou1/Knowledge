@@ -18,7 +18,8 @@ import cn.campusapp.router.annotation.RouterMap;
 
 /**
  * Created by zhangyuncai on 2017/6/26.
- * 讲解textview的一些基本配置
+ * 讲解ImageView的一些基本配置
+ * 学习ImageView
  */
 @RouterMap({"activity://imageviewbasic"})
 public class ImageViewBasicActivity extends BaseActivity {
@@ -43,6 +44,7 @@ public class ImageViewBasicActivity extends BaseActivity {
                 LogUtils.i(TAG, "imagepath=" + file.getAbsolutePath());
             }
         });
+
 
     }
 

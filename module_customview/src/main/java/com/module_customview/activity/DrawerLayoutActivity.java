@@ -15,6 +15,7 @@ import cn.campusapp.router.annotation.RouterMap;
 /**
  * Created by zhangyuncai on 2017/6/26.
  * 讲解DrawerLayout和ActionBar的基本知识
+ * 学习DrawerLayout
  */
 @RouterMap({"activity://drawerlayout"})
 public class DrawerLayoutActivity extends BaseActivity {

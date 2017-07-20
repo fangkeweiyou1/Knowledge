@@ -10,15 +10,18 @@ import com.module_customview.base.BaseActivity;
 /**
  * Created by zhangyuncai on 2017/6/26.
  * 讲解textview的一些基本配置
+ * 学习TextView
  */
 
-public class TextBasicActivity extends BaseActivity {
+public class TextViewActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_textviewbasic);
 
         TextView tv_content = (TextView) findViewById(R.id.tv_content);
+
+        tv_content.isShown();//只有当view本身以及它的所有祖先们都是visible时，isShown（）才返回TRUE
     }
 
 

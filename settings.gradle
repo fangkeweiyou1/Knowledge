@@ -1,6 +1,7 @@
-include ':app',
-        ':module_customview',
-//        ':module_banner',
-        ':commonlibs',
-        ':musicplayer',
-        ':module_specialview'
+include ':app'
+//include ':module_myandroidchart'
+include ':module_customview'
+//      include  ':module_banner'
+include ':commonlibs'
+//include ':musicplayer'
+//include ':module_specialview'

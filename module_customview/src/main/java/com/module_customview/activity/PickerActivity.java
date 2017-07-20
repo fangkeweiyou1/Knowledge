@@ -36,6 +36,7 @@ import cn.campusapp.router.annotation.RouterMap;
 /**
  * Created by zhangyuncai on 2017/7/17.
  * 测试picker
+ * 学习Picker
  */
 @RouterMap({"activity://picker"})
 public class PickerActivity extends BaseActivity implements View.OnClickListener {

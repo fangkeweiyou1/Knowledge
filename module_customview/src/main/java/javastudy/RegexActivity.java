@@ -1,4 +1,4 @@
-package com.module_customview.activity;
+package javastudy;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +11,8 @@ import cn.campusapp.router.annotation.RouterMap;
 
 /**
  * Created by zhangyuncai on 2017/6/28.
+ * 学习正则表达式
+ * 学习Regex
  */
 @RouterMap({"activity://regex"})
 public class RegexActivity extends BaseActivity {

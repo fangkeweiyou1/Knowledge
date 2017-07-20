@@ -18,6 +18,7 @@ import cn.campusapp.router.annotation.RouterMap;
 
 /**
  * Created by zhangyuncai on 2017/6/27.
+ * 学习TabLayout
  */
 @RouterMap({"activity://tablayout"})
 public class TabLayoutActivity extends BaseActivity {

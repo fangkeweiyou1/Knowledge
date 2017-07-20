@@ -44,13 +44,13 @@
             android:name=".activity.DialogBasicActvitity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
-            android:name=".activity.TextBasicActivity"
+            android:name=".activity.TextViewActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
-            android:name=".activity.ComparatorActivity"
+            android:name="javastudy.ComparatorActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
-            android:name=".activity.MathActivity"
+            android:name="javastudy.MathActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".activity.DrawerLayoutActivity"
@@ -65,7 +65,7 @@
             android:name=".activity.Flexbox2Activity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".activity.RegexActivity"
+            android:name="javastudy.RegexActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Kotlin01Activity"
@@ -100,7 +100,7 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".utils.textutils.TextUtilActivity"
+            android:name="javastudy.TextUtilActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
@@ -116,11 +116,15 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".activity.ExceptionActivity"
+            android:name="javastudy.ExceptionActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
             android:name=".activity.ImageViewBasicActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activity.MeterialDesignActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

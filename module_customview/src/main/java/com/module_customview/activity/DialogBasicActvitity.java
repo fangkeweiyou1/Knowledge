@@ -16,6 +16,7 @@ import cn.campusapp.router.annotation.RouterMap;
 /**
  * Created by zhangyuncai on 2017/6/26.
  * 讲解dialog的一些基本配置
+ * 学习Dialog
  */
 @RouterMap({"activity://dialogbasic"})
 public class DialogBasicActvitity extends BaseActivity {

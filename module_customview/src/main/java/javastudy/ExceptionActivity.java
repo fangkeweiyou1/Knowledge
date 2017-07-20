@@ -1,4 +1,4 @@
-package com.module_customview.activity;
+package javastudy;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

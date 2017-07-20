@@ -1,4 +1,4 @@
-package com.module_customview.activity;
+package javastudy;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -24,6 +24,7 @@ import cn.campusapp.router.annotation.RouterMap;
 /**
  * Created by zhangyuncai on 2017/6/26.
  * Comparator比较器的使用
+ * 学习Comparator
  */
 
 @RouterMap({"activity://comparator"})

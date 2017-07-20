@@ -9,6 +9,7 @@ import com.module_customview.base.BaseActivity;
 /**
  * Created by zhangyuncai on 2017/6/26.
  * 讲解viewpager的一些基本配置
+ * 学习Viewpager
  */
 
 public class ViewpagerBasicActivity extends BaseActivity {

@@ -28,6 +28,13 @@
         android:onClick="skipTest2"
         android:text="跳转到test2界面"/>
 
+    <Button
+        android:id="@+id/bt_movetoback"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="将此界面退后到后台,并不是finish"
+        android:textAllCaps="false"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"

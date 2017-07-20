@@ -11,6 +11,7 @@ import cn.campusapp.router.annotation.RouterMap;
 
 /**
  * Created by zhangyuncai on 2017/7/2.
+ * 学习SharedPreferences
  */
 @RouterMap({"activity://sharepre"})
 public class SharepreActivity extends BaseActivity {

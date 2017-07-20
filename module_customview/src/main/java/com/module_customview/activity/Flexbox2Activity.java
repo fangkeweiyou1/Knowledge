@@ -23,6 +23,7 @@ import cn.campusapp.router.annotation.RouterMap;
 
 /**
  * Created by zhangyuncai on 2017/6/27.
+ * 学习Flexbox
  */
 @RouterMap({"activity://flexbox2"})
 public class Flexbox2Activity extends BaseActivity {

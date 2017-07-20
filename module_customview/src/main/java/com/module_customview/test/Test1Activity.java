@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -29,15 +30,14 @@ public class Test1Activity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test1);
 
-        RelativeLayout rl_layout= (RelativeLayout) findViewById(R.id.rl_layout);
-        TextView item_add_member_tab5= (TextView) View.inflate(this,R.layout.item_add_member_tab5,null);
+        RelativeLayout rl_layout = (RelativeLayout) findViewById(R.id.rl_layout);
+        TextView item_add_member_tab5 = (TextView) View.inflate(this, R.layout.item_add_member_tab5, null);
         item_add_member_tab5.setText("测试");
         item_add_member_tab5.setTag(10001);
         rl_layout.addView(item_add_member_tab5);
 
         TextView textView = (TextView) rl_layout.findViewWithTag(10001);
-        if(textView!=null)
-        {
+        if (textView != null) {
             textView.setText("测试e");
         }
 
@@ -48,6 +48,24 @@ public class Test1Activity extends BaseActivity {
 //        str = str.replace("\n", "");
 //        System.out.println("<<<>>>==" + str);
 
+        movetoback();
+
+    }
+
+    boolean flag = true;
+
+    /**
+     * 可将APP退至后台
+     */
+    public void movetoback() {
+        Button bt_movetoback = (Button) findViewById(R.id.bt_movetoback);
+        bt_movetoback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveTaskToBack(flag);
+                flag = !flag;
+            }
+        });
     }
 
     public void skipTest2(View v) {

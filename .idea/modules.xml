@@ -6,8 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/commonlibs/commonlibs.iml" filepath="$PROJECT_DIR$/commonlibs/commonlibs.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_customview/module_customview.iml" filepath="$PROJECT_DIR$/module_customview/module_customview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/module_specialview/module_specialview.iml" filepath="$PROJECT_DIR$/module_specialview/module_specialview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/musicplayer/musicplayer.iml" filepath="$PROJECT_DIR$/musicplayer/musicplayer.iml" />
     </modules>
   </component>
 </project>
