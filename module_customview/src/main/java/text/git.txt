@@ -1,0 +1,6 @@
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+去除缓存
+
+右击java文件，git->show history->选中某次提交右击get可以将该java文件恢复到该次提交
