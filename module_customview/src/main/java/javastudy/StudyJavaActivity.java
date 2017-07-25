@@ -99,6 +99,10 @@ public class StudyJavaActivity extends BaseActivity {
 //        经常发现有List<? super T>、Set<? extends T> 的声明，是什么意思呢？<? super T>表示包括T在内的任何T的父类
 // ，<? extends T>表示包括T在内的任何T的子类，下面我们详细分析一下两种通配符具体的区别。
 
+        //TODO import static System,这样就可以使用out.printlf的静态方法了,前面不用加上System了
+
+        //TODO 学习System
+        //TODO System中in是记录键盘录入,out是打印到控制台上
     }
 
     public <T extends Comparator<? super T>> void sort(List<T> list) {

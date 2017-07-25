@@ -16,7 +16,6 @@ import com.module_customview.activity.DialogBasicActvitity;
 import com.module_customview.activity.ImageViewBasicActivity;
 import com.module_customview.activity.MeterialDesignActivity;
 import com.module_customview.activity.PickerActivity;
-import com.module_customview.activity.ScrollViewActivity;
 import com.module_customview.activity.TextViewActivity;
 import com.module_customview.base.BaseActivity;
 import com.module_customview.model.Student;
@@ -107,11 +106,13 @@ public class MainActivity extends BaseActivity {
 
 
     private void autoSkip() {
+        System.out.println("-----------------<<<>>>--------------------");
+        System.out.println("-----------------<<<>>>--------------------");
 //        startActivity(new Intent(this,Kotlin01Activity.class));
-        startActivity(new Intent(this, ScrollViewActivity.class));
+//        startActivity(new Intent(this, ScrollViewActivity.class));
 //        startActivity(new Intent(this, ExceptionActivity.class));
 //        startActivity(new Intent(this, DialogBasicActvitity.class));
-//        startActivity(new Intent(this,TextUtilActivity.class));
+        startActivity(new Intent(this,TextUtilActivity.class));
 //        startActivity(new Intent(this,DialogBasicActvitity.class));
 //        startActivity(new Intent(this,AnimationActivity.class));
 //        startActivity(new Intent(this,TextViewActivity.class));

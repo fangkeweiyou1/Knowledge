@@ -7,6 +7,7 @@ import com.module_customview.R;
 import com.module_customview.base.BaseActivity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -17,6 +18,7 @@ import cn.campusapp.router.annotation.RouterMap;
  * Created by zhangyuncai on 2017/7/3.
  * 学习TextUtil,
  * 学习Collections
+ * 学习Arrays
  * 学习commons-lang
  */
 @RouterMap({"activity://textutil"})
@@ -67,6 +69,12 @@ public class TextUtilActivity extends BaseActivity {
         //TODO:在数组中每个元素之间使用“,”来连接
 //        String join = TextUtils.join(",", strings);
 //        LogUtils.i(TAG, "join=" + join);
+
+        int[] arr = new int[]{2, 1, 4};
+        Arrays.sort(arr);
+        for (int i : arr) {
+            System.out.println("<<<>>>i=" + i);
+        }
 
     }
 
