@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.commonlibs.utils.LogUtils;
+import com.module_customview.activity.ConstraintLayoutActivity;
 import com.module_customview.activity.DialogBasicActvitity;
 import com.module_customview.activity.ImageViewBasicActivity;
 import com.module_customview.activity.MeterialDesignActivity;
@@ -112,7 +113,9 @@ public class MainActivity extends BaseActivity {
 //        startActivity(new Intent(this, ScrollViewActivity.class));
 //        startActivity(new Intent(this, ExceptionActivity.class));
 //        startActivity(new Intent(this, DialogBasicActvitity.class));
-        startActivity(new Intent(this,TextUtilActivity.class));
+//        startActivity(new Intent(this,TextUtilActivity.class));
+//        startActivity(new Intent(this,ConstraintLayoutActivity.class));
+        startActivity(new Intent(this,Test1Activity.class));
 //        startActivity(new Intent(this,DialogBasicActvitity.class));
 //        startActivity(new Intent(this,AnimationActivity.class));
 //        startActivity(new Intent(this,TextViewActivity.class));
@@ -192,6 +195,7 @@ public class MainActivity extends BaseActivity {
 //        activityNames.put("kotlin01", Kotlin01Activity.class.getSimpleName());
 
         activityNames.put("textutil", TextUtilActivity.class.getSimpleName());
+        activityNames.put("contraintlayout", ConstraintLayoutActivity.class.getSimpleName());
 
         //TODO:学习java
         activityNames.put("studyjava", StudyJavaActivity.class.getSimpleName());

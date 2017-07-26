@@ -39,7 +39,7 @@ dependencies {
 
     compile 'com.google.code.gson:gson:2.7'
 
-    compile 'com.github.vajro:MaterialDesignLibrary:1.6'
+//    compile 'com.github.vajro:MaterialDesignLibrary:1.6'
 
 
 }

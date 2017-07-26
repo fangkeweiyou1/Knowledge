@@ -2,7 +2,10 @@ package com.module_customview.test;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -24,6 +27,7 @@ import cn.campusapp.router.annotation.RouterMap;
 @RouterMap({"activity://test1"})
 public class Test1Activity extends BaseActivity {
     public static final String TAG = "<<<>>>Test1Activity";
+    private TextView tv_weixin;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +35,7 @@ public class Test1Activity extends BaseActivity {
         setContentView(R.layout.activity_test1);
 
         RelativeLayout rl_layout = (RelativeLayout) findViewById(R.id.rl_layout);
+        tv_weixin = (TextView) findViewById(R.id.tv_weixin);
         TextView item_add_member_tab5 = (TextView) View.inflate(this, R.layout.item_add_member_tab5, null);
         item_add_member_tab5.setText("测试");
         item_add_member_tab5.setTag(10001);
@@ -48,9 +53,22 @@ public class Test1Activity extends BaseActivity {
 //        str = str.replace("\n", "");
 //        System.out.println("<<<>>>==" + str);
 
-        movetoback();
+//        movetoback();
+
+
+
 
     }
+
+    Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            ContextCompat.getDrawable(Test1Activity.this, R.drawable.f1);
+        }
+    };
+
+    boolean isFinishActivity = false;
+
 
     boolean flag = true;
 
@@ -66,6 +84,12 @@ public class Test1Activity extends BaseActivity {
                 flag = !flag;
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        isFinishActivity = true;
+        super.onBackPressed();
     }
 
     public void skipTest2(View v) {
@@ -95,4 +119,21 @@ public class Test1Activity extends BaseActivity {
         LogUtils.i(TAG, "onNewIntent");
     }
 
+
+    private void weixin() {
+        /*TODO----------------------->>>>  这是给掌店通新增解析表情的  <<<<<-----------------------start*/
+
+        /*String str = "af/:--b[囧]ad/::-|/::B/::'(faffff/:,@o/:,@o/:,@o/:,@o/:,@o  [囧]";
+        SpannableString spannableString = new SpannableString(str);
+        int textSize = (int) tv_weixin.getTextSize();
+        SpannableString expressionString = EmotionUtil.getExpressionString2(this, str, textSize);
+        if (expressionString != null) {
+            System.out.println("-----------------<<<>>>--------------------不是空的");
+            tv_weixin.setText(expressionString);
+        } else {
+            System.out.println("-----------------<<<>>>--------------------是空的");
+
+        }*/
+      /*TODO----------------------->>>>  这是给掌店通新增解析表情的  <<<<<-----------------------end*/
+    }
 }

@@ -134,6 +134,9 @@
         <activity
             android:name=".activity.BitmapActivity"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>  <activity
+            android:name=".activity.ConstraintLayoutActivity"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 
