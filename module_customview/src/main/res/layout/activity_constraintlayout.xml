@@ -39,4 +39,28 @@
         <!--android:id="@+id/radioButton"/>-->
 
     <!---->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/f1"
+        tools:layout_editor_absoluteY="239dp"
+        tools:layout_editor_absoluteX="174dp"
+        android:id="@+id/imageView2"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="74dp"
+        tools:layout_editor_absoluteX="28dp"
+        android:id="@+id/textView5"/>
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="42dp"
+        tools:layout_editor_absoluteX="126dp"
+        android:id="@+id/button"/>
 </android.support.constraint.ConstraintLayout>

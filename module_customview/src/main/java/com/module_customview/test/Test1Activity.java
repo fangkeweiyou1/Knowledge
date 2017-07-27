@@ -4,8 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
+import android.text.SpannableString;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.commonlibs.utils.LogUtils;
 import com.module_customview.R;
 import com.module_customview.base.BaseActivity;
+import com.module_customview.weixin.EmotionUtil;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -28,6 +30,7 @@ import cn.campusapp.router.annotation.RouterMap;
 public class Test1Activity extends BaseActivity {
     public static final String TAG = "<<<>>>Test1Activity";
     private TextView tv_weixin;
+    private String str = "[囧]";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,14 +59,29 @@ public class Test1Activity extends BaseActivity {
 //        movetoback();
 
 
+        new Thread() {
+            @Override
+            public void run() {
+                for (String s : EmotionUtil.getEmotionList()) {
+                    Message msg = new Message();
+                    msg.obj = s;
+                    mHandler.sendMessage(msg);
+                    SystemClock.sleep(1000);
+                }
+            }
+        }.start();
 
-
+        String str1 = "TTT";
+        int indext = str1.indexOf("TTT");
+        System.out.println("-----------------<<<>>>--------------------index=" + indext);
     }
+
 
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            ContextCompat.getDrawable(Test1Activity.this, R.drawable.f1);
+            str = (String) msg.obj;
+            weixin();
         }
     };
 
@@ -123,17 +141,16 @@ public class Test1Activity extends BaseActivity {
     private void weixin() {
         /*TODO----------------------->>>>  这是给掌店通新增解析表情的  <<<<<-----------------------start*/
 
-        /*String str = "af/:--b[囧]ad/::-|/::B/::'(faffff/:,@o/:,@o/:,@o/:,@o/:,@o  [囧]";
-        SpannableString spannableString = new SpannableString(str);
+//        str = "af/:--b[囧]ad/::-|/::B/::'(faffff/:,@o/:,@o/:,@o/:,@o/:,@o  [囧]";
         int textSize = (int) tv_weixin.getTextSize();
-        SpannableString expressionString = EmotionUtil.getExpressionString2(this, str, textSize);
+        SpannableString expressionString = EmotionUtil.getExpressionString(this, str, textSize);
         if (expressionString != null) {
             System.out.println("-----------------<<<>>>--------------------不是空的");
             tv_weixin.setText(expressionString);
         } else {
             System.out.println("-----------------<<<>>>--------------------是空的");
 
-        }*/
+        }
       /*TODO----------------------->>>>  这是给掌店通新增解析表情的  <<<<<-----------------------end*/
     }
 }

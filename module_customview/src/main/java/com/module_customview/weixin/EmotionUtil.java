@@ -19,7 +19,7 @@ import java.util.Map;
  * Created by zhangyuncai on 2017/7/26.
  */
 
-public class EmotionUtil {///:X-)/::*/:8*/:pd/:<W>/:beer/:coffee
+public class EmotionUtil {
     public static final String ee_1 = "/::)";
     public static final String ee_2 = "/::~";
     public static final String ee_3 = "/::B";
@@ -160,96 +160,96 @@ public class EmotionUtil {///:X-)/::*/:8*/:pd/:<W>/:beer/:coffee
             emotionMap.put(ee_22, R.drawable.f22);
             emotionMap.put(ee_23, R.drawable.f23);
             emotionMap.put(ee_24, R.drawable.f24);
-//            emotionMap.put(ee_25, R.drawable.f25);
+            emotionMap.put(ee_25, R.drawable.f25);
             emotionMap.put(ee_26, R.drawable.f26);
             emotionMap.put(ee_27, R.drawable.f27);
             emotionMap.put(ee_28, R.drawable.f28);
-            emotionMap.put(ee_29, R.drawable.fuck29);
+            emotionMap.put(ee_29, R.drawable.f29);
 
-            emotionMap.put(ee_30, R.drawable.fuck30);
-            emotionMap.put(ee_31, R.drawable.fuck31);
-            emotionMap.put(ee_32, R.drawable.fuck32);
-            emotionMap.put(ee_33, R.drawable.fuck33);
-            emotionMap.put(ee_34, R.drawable.fuck34);
-            emotionMap.put(ee_35, R.drawable.fuck35);
-            emotionMap.put(ee_36, R.drawable.fuck36);
-            emotionMap.put(ee_37, R.drawable.fuck37);
-            emotionMap.put(ee_38, R.drawable.fuck38);
-            emotionMap.put(ee_39, R.drawable.fuck39);
+            emotionMap.put(ee_30, R.drawable.f30);
+            emotionMap.put(ee_31, R.drawable.f31);
+            emotionMap.put(ee_32, R.drawable.f32);
+            emotionMap.put(ee_33, R.drawable.f33);
+            emotionMap.put(ee_34, R.drawable.f34);
+            emotionMap.put(ee_35, R.drawable.f35);
+            emotionMap.put(ee_36, R.drawable.f36);
+            emotionMap.put(ee_37, R.drawable.f37);
+            emotionMap.put(ee_38, R.drawable.f38);
+            emotionMap.put(ee_39, R.drawable.f39);
 
-            emotionMap.put(ee_40, R.drawable.fuck40);
-            emotionMap.put(ee_41, R.drawable.fuck41);
-            emotionMap.put(ee_42, R.drawable.fuck42);
-            emotionMap.put(ee_43, R.drawable.fuck43);
-            emotionMap.put(ee_44, R.drawable.fuck44);
-            emotionMap.put(ee_45, R.drawable.fuck45);
-            emotionMap.put(ee_46, R.drawable.fuck46);
-            emotionMap.put(ee_47, R.drawable.fuck47);
-            emotionMap.put(ee_48, R.drawable.fuck48);
-            emotionMap.put(ee_49, R.drawable.fuck49);
+            emotionMap.put(ee_40, R.drawable.f40);
+            emotionMap.put(ee_41, R.drawable.f41);
+            emotionMap.put(ee_42, R.drawable.f42);
+            emotionMap.put(ee_43, R.drawable.f43);
+            emotionMap.put(ee_44, R.drawable.f44);
+            emotionMap.put(ee_45, R.drawable.f45);
+            emotionMap.put(ee_46, R.drawable.f46);
+            emotionMap.put(ee_47, R.drawable.f47);
+            emotionMap.put(ee_48, R.drawable.f48);
+            emotionMap.put(ee_49, R.drawable.f49);
 
-            emotionMap.put(ee_50, R.drawable.fuck50);
-            emotionMap.put(ee_51, R.drawable.fuck51);
-            emotionMap.put(ee_52, R.drawable.fuck52);
-            emotionMap.put(ee_53, R.drawable.fuck53);
-            emotionMap.put(ee_54, R.drawable.fuck54);
-            emotionMap.put(ee_55, R.drawable.fuck55);
-            emotionMap.put(ee_56, R.drawable.fuck56);
-            emotionMap.put(ee_57, R.drawable.fuck57);
-            emotionMap.put(ee_58, R.drawable.fuck58);
-            emotionMap.put(ee_59, R.drawable.fuck59);
+            emotionMap.put(ee_50, R.drawable.f50);
+            emotionMap.put(ee_51, R.drawable.f51);
+            emotionMap.put(ee_52, R.drawable.f52);
+            emotionMap.put(ee_53, R.drawable.f53);
+            emotionMap.put(ee_54, R.drawable.f54);
+            emotionMap.put(ee_55, R.drawable.f55);
+            emotionMap.put(ee_56, R.drawable.f56);
+            emotionMap.put(ee_57, R.drawable.f57);
+            emotionMap.put(ee_58, R.drawable.f58);
+            emotionMap.put(ee_59, R.drawable.f59);
 
-            emotionMap.put(ee_60, R.drawable.fuck60);
-            emotionMap.put(ee_61, R.drawable.fuck61);
-            emotionMap.put(ee_62, R.drawable.fuck62);
-            emotionMap.put(ee_63, R.drawable.fuck63);
-            emotionMap.put(ee_64, R.drawable.fuck64);
-            emotionMap.put(ee_65, R.drawable.fuck65);
-            emotionMap.put(ee_66, R.drawable.fuck66);
-            emotionMap.put(ee_67, R.drawable.fuck67);
-            emotionMap.put(ee_68, R.drawable.fuck68);
-            emotionMap.put(ee_69, R.drawable.fuck69);
+            emotionMap.put(ee_60, R.drawable.f60);
+            emotionMap.put(ee_61, R.drawable.f61);
+            emotionMap.put(ee_62, R.drawable.f62);
+            emotionMap.put(ee_63, R.drawable.f63);
+            emotionMap.put(ee_64, R.drawable.f64);
+            emotionMap.put(ee_65, R.drawable.f65);
+            emotionMap.put(ee_66, R.drawable.f66);
+            emotionMap.put(ee_67, R.drawable.f67);
+            emotionMap.put(ee_68, R.drawable.f68);
+            emotionMap.put(ee_69, R.drawable.f69);
 
-            emotionMap.put(ee_70, R.drawable.fuck70);
-            emotionMap.put(ee_71, R.drawable.fuck71);
-            emotionMap.put(ee_72, R.drawable.fuck72);
-            emotionMap.put(ee_73, R.drawable.fuck73);
-            emotionMap.put(ee_74, R.drawable.fuck74);
-            emotionMap.put(ee_75, R.drawable.fuck75);
-            emotionMap.put(ee_76, R.drawable.fuck76);
-            emotionMap.put(ee_77, R.drawable.fuck77);
-            emotionMap.put(ee_78, R.drawable.fuck78);
-            emotionMap.put(ee_79, R.drawable.fuck79);
+            emotionMap.put(ee_70, R.drawable.f70);
+            emotionMap.put(ee_71, R.drawable.f71);
+            emotionMap.put(ee_72, R.drawable.f72);
+            emotionMap.put(ee_73, R.drawable.f73);
+            emotionMap.put(ee_74, R.drawable.f74);
+            emotionMap.put(ee_75, R.drawable.f75);
+            emotionMap.put(ee_76, R.drawable.f76);
+            emotionMap.put(ee_77, R.drawable.f77);
+            emotionMap.put(ee_78, R.drawable.f78);
+            emotionMap.put(ee_79, R.drawable.f79);
 
-            emotionMap.put(ee_80, R.drawable.fuck80);
-            emotionMap.put(ee_81, R.drawable.fuck81);
-            emotionMap.put(ee_82, R.drawable.fuck82);
-            emotionMap.put(ee_83, R.drawable.fuck83);
-            emotionMap.put(ee_84, R.drawable.fuck84);
-            emotionMap.put(ee_85, R.drawable.fuck85);
-            emotionMap.put(ee_86, R.drawable.fuck86);
-            emotionMap.put(ee_87, R.drawable.fuck87);
-            emotionMap.put(ee_88, R.drawable.fuck88);
-            emotionMap.put(ee_89, R.drawable.fuck89);
+            emotionMap.put(ee_80, R.drawable.f80);
+            emotionMap.put(ee_81, R.drawable.f81);
+            emotionMap.put(ee_82, R.drawable.f82);
+            emotionMap.put(ee_83, R.drawable.f83);
+            emotionMap.put(ee_84, R.drawable.f84);
+            emotionMap.put(ee_85, R.drawable.f85);
+            emotionMap.put(ee_86, R.drawable.f86);
+            emotionMap.put(ee_87, R.drawable.f87);
+            emotionMap.put(ee_88, R.drawable.f88);
+            emotionMap.put(ee_89, R.drawable.f89);
 
-            emotionMap.put(ee_90, R.drawable.fuck90);
-            emotionMap.put(ee_91, R.drawable.fuck91);
-            emotionMap.put(ee_92, R.drawable.fuck92);
-            emotionMap.put(ee_93, R.drawable.fuck93);
-            emotionMap.put(ee_94, R.drawable.fuck94);
-            emotionMap.put(ee_95, R.drawable.fuck95);
-            emotionMap.put(ee_96, R.drawable.fuck96);
-            emotionMap.put(ee_97, R.drawable.fuck97);
-            emotionMap.put(ee_98, R.drawable.fuck98);
-            emotionMap.put(ee_99, R.drawable.fuck99);
+            emotionMap.put(ee_90, R.drawable.f90);
+            emotionMap.put(ee_91, R.drawable.f91);
+            emotionMap.put(ee_92, R.drawable.f92);
+            emotionMap.put(ee_93, R.drawable.f93);
+            emotionMap.put(ee_94, R.drawable.f94);
+            emotionMap.put(ee_95, R.drawable.f95);
+            emotionMap.put(ee_96, R.drawable.f96);
+            emotionMap.put(ee_97, R.drawable.f97);
+            emotionMap.put(ee_98, R.drawable.f98);
+            emotionMap.put(ee_99, R.drawable.f99);
 
-            emotionMap.put(ee_100, R.drawable.fuck100);
-            emotionMap.put(ee_101, R.drawable.fuck101);
-            emotionMap.put(ee_102, R.drawable.fuck102);
-            emotionMap.put(ee_103, R.drawable.fuck103);
-            emotionMap.put(ee_104, R.drawable.fuck104);
-            emotionMap.put(ee_105, R.drawable.fuck105);
-            emotionMap.put(ee_106, R.drawable.fuck106);
+            emotionMap.put(ee_100, R.drawable.f100);
+            emotionMap.put(ee_101, R.drawable.f101);
+            emotionMap.put(ee_102, R.drawable.f102);
+            emotionMap.put(ee_103, R.drawable.f103);
+            emotionMap.put(ee_104, R.drawable.f104);
+            emotionMap.put(ee_105, R.drawable.f105);
+            emotionMap.put(ee_106, R.drawable.f106);
         }
 
         return emotionMap;
@@ -410,7 +410,8 @@ public class EmotionUtil {///:X-)/::*/:8*/:pd/:<W>/:beer/:coffee
                 while (fromIndex < str.length()) {
 
                     int indexOf = str.indexOf(s, fromIndex);
-                    if (indexOf <= 0) {
+                    if (indexOf < 0) {
+                        System.out.println("-----------------<<<>>>--------------------没找到该表情=" + s);
                         break;
                     }
                     fromIndex = indexOf + s.length();
@@ -421,6 +422,9 @@ public class EmotionUtil {///:X-)/::*/:8*/:pd/:<W>/:beer/:coffee
                     System.out.println("-----------------<<<>>>--------------------startIndex=" + startIndex);
                     System.out.println("-----------------<<<>>>--------------------endIndex=" + endIndex);
 
+                    if (getEmotionMap() == null || !getEmotionMap().containsKey(s) || getEmotionMap().get(s) == null) {
+                        continue;
+                    }
                     Drawable drawable = ContextCompat.getDrawable(context, getEmotionMap().get(s));
                     if (drawable == null) {
                         continue;
