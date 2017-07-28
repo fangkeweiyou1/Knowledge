@@ -17,6 +17,7 @@ import com.module_customview.activity.DialogBasicActvitity;
 import com.module_customview.activity.ImageViewBasicActivity;
 import com.module_customview.activity.MeterialDesignActivity;
 import com.module_customview.activity.PickerActivity;
+import com.module_customview.activity.ProgressbarBasicActivity;
 import com.module_customview.activity.TextViewActivity;
 import com.module_customview.base.BaseActivity;
 import com.module_customview.model.Student;
@@ -115,7 +116,8 @@ public class MainActivity extends BaseActivity {
 //        startActivity(new Intent(this, DialogBasicActvitity.class));
 //        startActivity(new Intent(this,TextUtilActivity.class));
 //        startActivity(new Intent(this,ConstraintLayoutActivity.class));
-        startActivity(new Intent(this,Test1Activity.class));
+//        startActivity(new Intent(this,Test1Activity.class));
+        startActivity(new Intent(this,ProgressbarBasicActivity.class));
 //        startActivity(new Intent(this,DialogBasicActvitity.class));
 //        startActivity(new Intent(this,AnimationActivity.class));
 //        startActivity(new Intent(this,TextViewActivity.class));
@@ -233,7 +235,7 @@ public class MainActivity extends BaseActivity {
 //        activityNames.put("linearlayoutbasic", LinearLayoutBasicActivity.class.getSimpleName());
 //
 //        activityNames.put("partrecycler", PartRecyclerActivity.class.getSimpleName());
-//        activityNames.put("progressbarbasic", ProgressbarBasicActivity.class.getSimpleName());
+        activityNames.put("progressbarbasic", ProgressbarBasicActivity.class.getSimpleName());
 //        activityNames.put("recyclerhome", RecyclerHomeActivity.class.getSimpleName());
 //        activityNames.put("renativelayoutbasic", RenativeLayoutBasicActivity.class.getSimpleName());
         activityNames.put("textviewbasic", TextViewActivity.class.getSimpleName());

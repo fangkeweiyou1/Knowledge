@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.text.SpannableString;
 import android.view.View;
@@ -59,29 +58,26 @@ public class Test1Activity extends BaseActivity {
 //        movetoback();
 
 
-        new Thread() {
-            @Override
-            public void run() {
-                for (String s : EmotionUtil.getEmotionList()) {
-                    Message msg = new Message();
-                    msg.obj = s;
-                    mHandler.sendMessage(msg);
-                    SystemClock.sleep(1000);
-                }
-            }
-        }.start();
+//        new Thread() {
+//            @Override
+//            public void run() {
+//                for (String s : EmotionUtil.getEmotionList()) {
+//                    Message msg = new Message();
+//                    msg.obj = s;
+//                    mHandler.sendMessage(msg);
+//                    SystemClock.sleep(1000);
+//                }
+//            }
+//        }.start();
 
-        String str1 = "TTT";
-        int indext = str1.indexOf("TTT");
-        System.out.println("-----------------<<<>>>--------------------index=" + indext);
     }
 
 
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            str = (String) msg.obj;
-            weixin();
+//            str = (String) msg.obj;
+//            weixin();
         }
     };
 

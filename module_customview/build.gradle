@@ -55,6 +55,7 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
 
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.daimajia.numberprogressbar:library:1.2@aar'
 }
 repositories {
     mavenCentral()
