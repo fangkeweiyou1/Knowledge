@@ -272,7 +272,7 @@ public class MainActivity extends BaseActivity {
         mFlowLayout.setAdapter(mAdapter);
 
         //我是274行代码
-        //我是275行代码
+
     }
 
     @Override
