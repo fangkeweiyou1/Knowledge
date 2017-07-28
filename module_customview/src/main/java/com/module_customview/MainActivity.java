@@ -135,11 +135,11 @@ public class MainActivity extends BaseActivity {
     private boolean findRouterParams(String activityName) {
 
 
-        if (TextUtils.equals("kotlin01", activityName)) {
-            LogUtils.i(TAG, "kotlin01");
-            startActivity(new Intent(this, Kotlin01Activity.class));
-            return true;
-        }
+//        if (TextUtils.equals("kotlin01", activityName)) {
+//            LogUtils.i(TAG, "kotlin01");
+//            startActivity(new Intent(this, Kotlin01Activity.class));
+//            return true;
+//        }
 
         if (actionActivityNames.containsKey(activityName)) {
             openActivityForReceiver(activityName);
